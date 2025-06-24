@@ -3,11 +3,12 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { CourseTagButton } from "../_atoms/buttons";
 import { CarouselSlider, ImageSlider } from "../_molecules/slider";
-import { mockCourses, tabs, tagMap } from "../mocks/courses.json";
+import links from "../mocks/courses.json";
 import TabMenu from "../_molecules/tabMenu";
 import CourseCard from "../_molecules/courseCard";
 
 const SkillsSection = ({ courses }) => {
+  const { tabs, tagMap } = links;
   const [activeTabName, setActiveTabName] = useState("Data Science");
   const [activeTag, setActiveTag] = useState(tagMap["Data Science"][0]);
 

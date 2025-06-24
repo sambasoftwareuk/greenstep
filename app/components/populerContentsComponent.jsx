@@ -2,7 +2,7 @@ import React from 'react'
 import CourseCard from '../_molecules/courseCard'
 import { Header2 } from '../_atoms/Headers'
 
-const PopularContentsComponent = ( { courses}) => {
+const PopularContentsComponent = ( { courses } ) => {
   return (
     <div className="flex flex-col w-full my-4">
         <Header2>Popular Courses</Header2>
