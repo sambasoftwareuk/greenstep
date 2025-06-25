@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "./components/navbar";
 import { Footer } from "./components/footer";
 import HamburgerMenu from "./components/hamburgerMenu";
+import AnnouncementBand from "./components/announcementBand";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
+            <AnnouncementBand />
           <div className="hidden md:block">
             <Navbar />
           </div>
