@@ -290,22 +290,17 @@ export const socialIcons = [
       </svg>
     ),
   },
-  {
-    alt: "YouTube",
-    href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225",
-    bgColor: "#FF0000",
-    svg: (
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="#fff"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M10 15.5L16 12L10 8.5V15.5ZM22 6.5C22 6.5 21.5 4.5 20.5 3.5C19.2 2.5 17.6 2.5 16.8 2.4C14.4 2.2 12 2.2 12 2.2H12C12 2.2 9.6 2.2 7.2 2.4C6.4 2.5 4.8 2.5 3.5 3.5C2.5 4.5 2 6.5 2 6.5S1.5 8.8 1.5 11.2V12.8C1.5 15.2 2 17.5 2 17.5S2.5 19.5 3.5 20.5C4.8 21.5 6.4 21.5 7.2 21.6C9.6 21.8 12 21.8 12 21.8H12C12 21.8 14.4 21.8 16.8 21.6C17.6 21.5 19.2 21.5 20.5 20.5C21.5 19.5 22 17.5 22 17.5S22.5 15.2 22.5 12.8V11.2C22.5 8.8 22 6.5 22 6.5Z" />
-      </svg>
-    ),
-  },
+ {
+  alt: "YouTube",
+  href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225",
+  bgColor: "transparent",
+  svg: (
+    <svg width="35" height="35" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="25" cy="25" r="25" fill="#FF0000" />
+      <polygon points="20,15 20,35 35,25" fill="white" />
+    </svg>
+  ),
+},
   {
     alt: "Twitter",
     href: "https://twitter.com/ctpmuhendislik",
