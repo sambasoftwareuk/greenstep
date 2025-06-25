@@ -209,3 +209,62 @@ export const DownArrowIcon = ({ style, className = "" }) => (
     <path d="M7 10l5 5 5-5H7z" />
   </svg>
 );
+export const Home = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+  </svg>
+);
+export const TurkishFlag = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 512 512"
+    style={style}
+    className={className}
+  >
+    <circle cx="256" cy="256" r="256" fill="#e30a17" />
+    <path
+      fill="#fff"
+      d="M207.5 256c0-35.1 28.5-63.5 63.5-63.5 9.6 0 18.7 2.1 26.9 5.9-14.4-13.3-33.6-21.4-54.6-21.4-43.5 0-78.7 35.2-78.7 78.7s35.2 78.7 78.7 78.7c21 0 40.2-8.1 54.6-21.4-8.1 3.8-17.2 5.9-26.9 5.9-35.1 0-63.5-28.5-63.5-63.5z"
+    />
+    <polygon
+      fill="#fff"
+      points="320,256 301.2,263.2 306.6,244.1 291.3,231.1 310.9,229.8 320,212 329.1,229.8 348.7,231.1 333.4,244.1 338.8,263.2"
+    />
+  </svg>
+);
+
+export const UKFlag = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 512 512"
+    style={style}
+    className={className}
+  >
+    <defs>
+      <clipPath id="circleClip">
+        <circle cx="256" cy="256" r="256" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#circleClip)">
+      <rect width="512" height="512" fill="#012169" />
+      <path d="M0 0l512 512M512 0L0 512" stroke="#fff" strokeWidth="60" />
+      <path d="M0 0l512 512M512 0L0 512" stroke="#c8102e" strokeWidth="30" />
+      <rect x="211" width="90" height="512" fill="#fff" />
+      <rect y="211" width="512" height="90" fill="#fff" />
+      <rect x="241" width="30" height="512" fill="#c8102e" />
+      <rect y="241" width="512" height="30" fill="#c8102e" />
+    </g>
+  </svg>
+);

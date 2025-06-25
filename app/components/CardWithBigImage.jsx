@@ -5,9 +5,9 @@ const CardWithBigImage = () => {
   return (
     <div className="  p-4 mt-6 ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {products.map((product, index) => (
+        {products.map((product) => (
           <BigCardWithImage
-            key={index}
+            key={product.id}
             title={product.title}
             imageLink={product.image}
             variant={1}
