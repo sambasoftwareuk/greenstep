@@ -2,7 +2,7 @@ import React from "react";
 import { CardImage } from "../_atoms/images";
 import { PrimaryButton } from "../_atoms/buttons";
 
-const BigCardWithImage = ({
+const ProductCardWithImage = ({
   title,
   imageLink,
   variant = 1,
@@ -38,9 +38,11 @@ const BigCardWithImage = ({
 
   return (
     <div className="group bg-white flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
-      {content}
+      {content.map((element, index) => (
+      <React.Fragment key={index}>{element}</React.Fragment>
+    ))}
     </div>
   );
 };
 
-export default BigCardWithImage;
+export default ProductCardWithImage;

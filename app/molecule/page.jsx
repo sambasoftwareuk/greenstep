@@ -13,7 +13,8 @@ import { TestimonialCard } from "../_molecules/testimonialCard";
 import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
-import CardWithBigImage from "../components/CardWithBigImage";
+import products from "../constants/bigCardProducts.json";
+import MainProductComponent from "../_components/CardWithBigImage";
 
 const page = () => {
   return (
@@ -99,7 +100,7 @@ const page = () => {
         </ImageSlider>
       </div>
       <LearnCard />
-      <CardWithBigImage />
+      <MainProductComponent products={products} />
     </div>
   );
 };
