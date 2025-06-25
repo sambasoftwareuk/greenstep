@@ -1,74 +1,61 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import Icon from "../_atoms/Icon";
-import {
-  OutlinedButton,
-  IconOnlyButton,
-  PrimaryButton,
-  OutlinedButtonWithIcon,
-} from "../_atoms/buttons";
-import { InputWithIconStart } from "../_atoms/inputs";
-import { Cart, Search, Globe, HamburgerIcon } from "../_atoms/Icons";
+import { IconOnlyButton } from "../_atoms/buttons";
+import { Home, TurkishFlag, UKFlag } from "../_atoms/Icons";
 import navLinks from "../constants/navLinks";
 import { LogoImage } from "../_atoms/images";
+import Logo from "../constants/logo.json";
 
 const Navbar = () => {
   return (
     <header className="w-full border-b bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 md:px-8 py-3 gap-2 max-w-full">
-        {/* Hamburger Menu */}
-        {/* <div className="flex md:hidden">
-          <IconOnlyButton icon={<Icon variant={HamburgerIcon} size={25} />} />
-        </div> */}
-
-        <div className=" flex items-center flex-shrink-0 ">
+        {/* Logo */}
+        <div className="mr-28">
           <Link href="/">
-            <LogoImage imageLink="/empower-logo.png" width={200} height={40} />
+            <LogoImage imageLink={Logo.imageLink} width={200} height={40} />
           </Link>
-
-          {/* Desktop  */}
-          <OutlinedButton
-            label="Explore"
-            className="hidden lg:flex border-0 text-xs text-secondary400 hover:text-primary900  transition-colors duration-200"
-          />
         </div>
 
-        {/* Icons for small screens */}
-        {/* <div className="flex items-center gap-0  md:hidden">
-          <IconOnlyButton icon={<Icon variant={Search} size={20} />} />
-          <IconOnlyButton icon={<Icon variant={Cart} size={20} />} />
-        </div> */}
+        {/* Navigation Links */}
+        <div className="hidden md:flex flex-grow justify-center items-center ">
+          <IconOnlyButton icon={<Icon variant={Home} size={20} />} />
+          {navLinks.map(({ label, href, className, dropdown }) => (
+            <div key={label} className="relative group">
+              <Link
+                href={href}
+                className={`p-3 text-md font-medium whitespace-nowrap text-secondary hover:text-primary900 hover:bg-primary50 rounded-sm transition-colors duration-200 ${
+                  className || ""
+                }`}
+              >
+                {label}
+              </Link>
 
-        {/* Search Input for Desktop */}
-        <div className="hidden md:flex flex-grow max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] w-full px-4">
-          <InputWithIconStart
-            placeholder="Search..."
-            icon={Search}
-            className="py-1"
-          />
-        </div>
-        {/* Right Section */}
-        <div className="hidden md:flex items-center gap-2 ">
-          {navLinks.map(({ label, href, className }) => (
-            <Link
-              key={label}
-              href={href}
-              className={`p-3 text-xs font-medium whitespace-nowrap bg-transparent text-secondary400 hover:text-primary900 hover:bg-primary50 rounded-sm transition-colors duration-200 ${className}`}
-            >
-              {label}
-            </Link>
+              {dropdown && dropdown.length > 0 && (
+                <div className="absolute left-0 top-full mt-1 hidden group-hover:block bg-white border shadow-md rounded-md z-20 min-w-[200px]">
+                  {dropdown.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary50 hover:text-primary900"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
-          <IconOnlyButton icon={<Icon variant={Cart} size={20} />} />
-          <PrimaryButton label="Login" />
-          <OutlinedButton
-            className="whitespace-nowrap text-primary900"
-            label="Sign Up"
-          />
-          <OutlinedButtonWithIcon
-            className="py-2.5 px-1.5 "
-            icon={<Icon variant={Globe} size={20} color="text-secondary " />}
-          />
+
+          {/* Divider */}
+          <span className="inline-block w-px h-7 bg-gray-300 mx-3" />
+
+          {/* Icons */}
+          <div className="flex">
+            <IconOnlyButton icon={<Icon variant={TurkishFlag} size={24} />} />
+            <IconOnlyButton icon={<Icon variant={UKFlag} size={22} />} />
+          </div>
         </div>
       </nav>
     </header>
