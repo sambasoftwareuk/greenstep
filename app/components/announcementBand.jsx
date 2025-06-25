@@ -1,49 +1,57 @@
 import React from "react";
-import { LogoImage } from "../_atoms/images";
-
-const socialIcons = [
-  { src: "/facebook.png", alt: "Facebook", href: "https://facebook.com/ctpmuhendislik" },
-  { src: "/instagram.png", alt: "Instagram", href: "https://instagram.com/ctpmuhendislik" },
-  { src: "/youtube.png", alt: "YouTube", href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225" },
-  { src: "/twitter.png", alt: "Twitter", href: "https://twitter.com/ctpmuhendislik" },
-  { src: "/linkedin.png", alt: "LinkedIn", href: "https://www.linkedin.com/company/ctp-muhendislik-su-sogutma-kuleleri/" },
-  { src: "/pinterest.png", alt: "Pinterest", href: "https://pinterest.com/ctpmuhendislik" },
-];
+import Link from "next/link";
+import { socialIcons } from "../_atoms/Icons";
 
 const AnnouncementBand = () => {
   return (
-    <div className="w-full bg-primary h-12 flex items-center justify-center px-4 text-xs text-black gap-28">
+    <div
+      className="
+        hidden lg:flex
+        w-full bg-primary h-12
+        items-center justify-center
+        px-4 text-md text-black
+        gap-28
+        sm:gap-16 md:gap-12 lg:gap-20
+        text-sm md:text-base lg:text-md
+      "
+    >
       <div className="flex gap-2 items-center">
-        {socialIcons.map(({ src, alt, href }, index) => (
-          <a
-            key={index}
+        {socialIcons?.map(({ href, svg, alt, bgColor }) => (
+          <Link
+            key={alt}
             href={href}
             target="_blank"
+            aria-label={alt}
             rel="noopener noreferrer"
-            className="transition-transform transform hover:scale-150"
+            className="transition-transform transform hover:scale-125"
           >
-            <LogoImage imageLink={src} width={28} height={28} alt={alt} />
-          </a>
+            <div
+              style={{ backgroundColor: bgColor }}
+              className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 flex items-center justify-center rounded-full"
+            >
+              {svg}
+            </div>
+          </Link>
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-12 text-white">
-        <a
+      <div className="flex flex-wrap items-center justify-center gap-3  text-white text-xs md:text-sm lg:text-base text-center">
+        <Link
           href="https://maps.google.com/?q=Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:underline cursor-pointer"
         >
           Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL
-        </a>
+        </Link>
 
-        <a href="facetime:+902163046868" className="hover:underline">
+        <Link href="tel:+902163046868" className="hover:underline">
           +90 216 304 68 68
-        </a>
+        </Link>
 
-        <a href="mailto:info@ctpmuhendislik.com" className="hover:underline">
+        <Link href="mailto:info@ctpmuhendislik.com" className="hover:underline">
           info@ctpmuhendislik.com
-        </a>
+        </Link>
       </div>
     </div>
   );
