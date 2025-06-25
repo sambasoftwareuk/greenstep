@@ -11,6 +11,7 @@ module.exports = {
         serif: ["var(--font-merriweather)", "serif"],
       },
       colors: {
+        primary: "#2dbcbc", // Cam göbeği tonu
         primary900: "#1a7f7f", // Daha koyu cam göbeği tonu
         primary500: "#2dbcbc", // Ana cam göbeği tonu
         primary300: "#7edada", // Açık cam göbeği
