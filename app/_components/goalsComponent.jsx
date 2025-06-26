@@ -28,7 +28,7 @@ const GoalsComponent = () => {
         </div>
         <div>
           <Image
-            src="/screenCapture.png"
+            src="/sampleimages/screen-capture.png"
             alt="Screen Capture"
             height={400}
             width={600}

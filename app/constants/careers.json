@@ -1,7 +1,7 @@
 [
   {
     "title": "Full Stack Web Developer",
-    "image": "/image1.png",
+    "image": "/sampleimages/image1.png",
     "salary": "$127,005 average salary (US)",
     "roles": "16,500 open roles (US)",
     "rating": "4.7",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Digital Marketer",
-    "image": "/image2.png",
+    "image": "/sampleimages/image2.png",
     "salary": "$61,126 average salary (US)",
     "roles": "36,600 open roles (US)",
     "rating": "4.5",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Data Scientist",
-    "image": "/image3.png",
+    "image": "/sampleimages/image3.png",
     "salary": "$126,629 average salary (US)",
     "roles": "20,800 open roles (US)",
     "rating": "4.6",

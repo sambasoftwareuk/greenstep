@@ -19,7 +19,7 @@ export const TestimonialCard = ({
       </div>
 
       <div className="flex items-center gap-4 mt-auto">
-        <ProfileImage imageLink="/man.png" />
+        <ProfileImage imageLink="/sampleimages/man.png" />
         <div>
           <p className="font-semibold text-secondary">{authorName}</p>
           <p className="text-sm text-secondary400">{authorTitle}</p>

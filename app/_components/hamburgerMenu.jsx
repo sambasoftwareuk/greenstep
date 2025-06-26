@@ -24,7 +24,7 @@ const hamburgerMenu = () => {
           />
         </div>
         <Link href="/">
-          <Image src="/1.png" alt="logo" width={70} height={70} />
+          <Image src="/green-step-logo.png" alt="logo" width={70} height={70} />
         </Link>
         <div className="flex items-center gap-0">
           <IconOnlyButton icon={<Icon variant={Search} size={20} />} />

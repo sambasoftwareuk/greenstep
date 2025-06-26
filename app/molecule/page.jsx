@@ -61,41 +61,41 @@ const page = () => {
       </div>
       <div className="mt-2">
         <ImageSlider>
-          <SliderImage imageLink={"/1.png"} />
+          <SliderImage imageLink={"/sampleimages/logo.png"} />
         </ImageSlider>
       </div>
       <div className="mt-2">
         <ImageSlider variant="infinite" showDots={true}>
-          <SliderImage imageLink={"/learner-centered.jpg"} />
+          <SliderImage imageLink={"/sampleimages/learner-centered.jpg"} />
           <SliderImage />
-          <SliderImage imageLink={"/1.png"} />
+          <SliderImage imageLink={"/sampleimages/life-in-the-uk.jpg"} />
         </ImageSlider>
       </div>
       <div className="mt-2">
         <ImageSlider showDots={true}>
-          <SliderImage imageLink={"/1.png"} />
-          <SliderImage imageLink={"/learner-centered.jpg"} />
+          <SliderImage imageLink={"/sampleimages/life-in-the-uk.jpg"} />
+          <SliderImage imageLink={"/sampleimages/learner-centered.jpg"} />
           <SliderImage />
         </ImageSlider>
       </div>
       <div className="mt-2">
         <ImageSlider variant={"autoSlide"} showDots={false} showArrows={false}>
-          <SliderImage imageLink={"/1.png"} />
-          <SliderImage imageLink={"/learner-centered.jpg"} />
+          <SliderImage imageLink={"/sampleimages/life-in-the-uk.jpg"} />
+          <SliderImage imageLink={"/sampleimages/learner-centered.jpg"} />
           <SliderImage />
         </ImageSlider>
       </div>
       <div className="mt-2">
         <ImageSlider variant={"autoSlide"} showDots={true} showArrows={false}>
-          <SliderImage imageLink={"/1.png"} />
-          <SliderImage imageLink={"/learner-centered.jpg"} />
+          <SliderImage imageLink={"/sampleimages/life-in-the-uk.jpg"} />
+          <SliderImage imageLink={"/sampleimages/learner-centered.jpg"} />
           <SliderImage />
         </ImageSlider>
       </div>
       <div className="mt-2">
         <ImageSlider variant={"autoSlide"} showDots={false} showArrows={true}>
-          <SliderImage imageLink={"/1.png"} />
-          <SliderImage imageLink={"/learner-centered.jpg"} />
+          <SliderImage imageLink={"/sampleimages/life-in-the-uk.jpg"} />
+          <SliderImage imageLink={"/sampleimages/learner-centered.jpg"} />
           <SliderImage />
         </ImageSlider>
       </div>
