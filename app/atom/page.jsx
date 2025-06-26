@@ -84,13 +84,13 @@ const page = () => {
         <DirectionButton icon="<" />
       </div>
       <div className="my-4">
-        <SliderImage imageLink="/learner-centered.jpg" imageAlt="samba" />
+        <SliderImage imageLink="/sampleimages/learner-centered.jpg" imageAlt="samba" />
       </div>
       <div className="my-4">
         <SliderImage />
       </div>
       <div>
-        <CardImage imageLink="/learner-centered.jpg" />
+        <CardImage imageLink="/sampleimages/learner-centered.jpg" />
       </div>
       <div>
         <CardImage />
@@ -102,7 +102,7 @@ const page = () => {
         <LogoImage width={200} height={80} />
       </div>
       <div>
-        <ProfileImage imageLink="/man.png" />
+        <ProfileImage imageLink="/sampleimages/man.png" />
       </div>
       <div>
         <ProfileImage />

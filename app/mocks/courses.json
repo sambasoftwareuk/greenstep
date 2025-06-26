@@ -11,7 +11,7 @@
       "oldPrice": 64.99,
       "badge": "New",
       "tags": ["ChatGPT", "Artificial Intelligence (AI)", "Data Science"],
-      "image": "/chatgpt.webp",
+      "image": "/sampleimages/chatgpt.webp",
       "description": "Master prompt engineering and become 10x more effective with AI tools."
     },
     {
@@ -25,7 +25,7 @@
       "oldPrice": 75.99,
       "badge": "Popular",
       "tags": ["Python", "AI", "Data Science"],
-      "image": "/python.jpg",
+      "image": "/sampleimages/python.jpg",
       "description": "Learn Python from scratch for data science applications."
     },
     {
@@ -39,7 +39,7 @@
       "oldPrice": 89.99,
       "badge": "Best Seller",
       "tags": ["Python", "ChatGPT", "AI"],
-      "image": "/data-science.jpg",
+      "image": "/sampleimages/data-science.jpg",
       "description": "Master prompt engineering and become 10x more effective with AI tools."
     },
     {
@@ -53,7 +53,7 @@
       "oldPrice": 64.99,
       "badge": "New",
       "tags": ["ChatGPT", "Artificial Intelligence (AI)", "Data Science"],
-      "image": "/chatgpt.webp",
+      "image": "/sampleimages/chatgpt.webp",
       "description": "Master prompt engineering and become 10x more effective with AI tools."
     },
     {
@@ -67,7 +67,7 @@
       "oldPrice": 75.99,
       "badge": "Popular",
       "tags": ["Python", "AI", "Data Science"],
-      "image": "/python.jpg",
+      "image": "/sampleimages/python.jpg",
       "description": "Learn Python from scratch for data science applications."
     },
     {
@@ -81,7 +81,7 @@
       "oldPrice": 89.99,
       "badge": "Best Seller",
       "tags": ["Python", "ChatGPT", "AI"],
-      "image": "/data-science.jpg",
+      "image": "/sampleimages/data-science.jpg",
       "description": "Master prompt engineering and become 10x more effective with AI tools."
     },
     {
@@ -95,7 +95,7 @@
       "oldPrice": 59.99,
       "badge": "New",
       "tags": ["JavaScript", "ReactJS", "Frontend"],
-      "image": "/js.webp",
+      "image": "/sampleimages/js.webp",
       "description": "Learn frontend and backend development from scratch."
     },
     {
@@ -109,7 +109,7 @@
       "oldPrice": 59.99,
       "badge": "Top Rated",
       "tags": ["JavaScript", "CSS", "Node.js"],
-      "image": "/css.png",
+      "image": "/sampleimages/css.png",
       "description": "Become a fullstack web developer."
     },
     {
@@ -123,7 +123,7 @@
       "oldPrice": 49.99,
       "badge": "New",
       "tags": ["React Native", "Mobile Apps", "Cross Platform"],
-      "image": "/native.webp",
+      "image": "/sampleimages/native.webp",
       "description": "Build mobile apps using React Native."
     },
     {
@@ -137,7 +137,7 @@
       "oldPrice": 49.99,
       "badge": "Popular",
       "tags": ["SQL", "Data Analysis", "Database"],
-      "image": "/sql.webp",
+      "image": "/sampleimages/sql.webp",
       "description": "Learn SQL basics and advanced queries."
     },
     {
@@ -151,7 +151,7 @@
       "oldPrice": 59.99,
       "badge": "Best Seller",
       "tags": ["Power BI", "Dashboards", "Data Viz"],
-      "image": "/power BI.webp",
+      "image": "/sampleimages/power BI.webp",
       "description": "Analyze and visualize data effectively using Power BI."
     },
     {
@@ -165,7 +165,7 @@
       "oldPrice": 39.99,
       "badge": "Top Rated",
       "tags": ["Excel", "Spreadsheets", "Analysis"],
-      "image": "/excel.png",
+      "image": "/sampleimages/excel.png",
       "description": "Master Excel techniques for business and data analysis."
     },
     {
@@ -179,7 +179,7 @@
       "oldPrice": 69.99,
       "badge": "New",
       "tags": ["Amazon AWS", "Cloud", "Certification"],
-      "image": "/aws1.webp",
+      "image": "/sampleimages/sampleimages/aws1.webp",
       "description": "Kickstart your cloud career with AWS fundamentals."
     },
     {
@@ -193,7 +193,7 @@
       "oldPrice": 55.99,
       "badge": "Popular",
       "tags": ["CompTIA Security+", "IT Support", "PC"],
-      "image": "/comptia.png",
+      "image": "/sampleimages/comptia.png",
       "description": "Start your IT career with the A+ certification preparation."
     },
     {
@@ -207,7 +207,7 @@
       "oldPrice": 69.99,
       "badge": "Top Rated",
       "tags": ["Cisco Certified Network Associate", "Networking", "CCNA"],
-      "image": "/cisco.jpeg",
+      "image": "/sampleimages/cisco.jpeg",
       "description": "Learn networking fundamentals and prepare for the CCNA exam."
     },
     {
@@ -221,7 +221,7 @@
       "oldPrice": 49.99,
       "badge": "Best Seller",
       "tags": ["Leadership", "Team Management", "Business"],
-      "image": "/LEADERSHIP.png",
+      "image": "/sampleimages/LEADERSHIP.png",
       "description": "Develop your leadership potential and inspire teams."
     },
     {
@@ -235,7 +235,7 @@
       "oldPrice": 59.99,
       "badge": "Popular",
       "tags": ["Emotional Intelligence", "Project Management", "Leadership"],
-      "image": "/eq.webp",
+      "image": "/sampleimages/eq.webp",
       "description": "Improve emotional intelligence to become a better leader."
     },
     {
@@ -249,7 +249,7 @@
       "oldPrice": 69.99,
       "badge": "Top Rated",
       "tags": ["Business Strategy", "Leadership"],
-      "image": "/strategy.webp",
+      "image": "/sampleimages/strategy.webp",
       "description": "Think strategically and make better business decisions."
     },
     {
@@ -263,7 +263,7 @@
       "oldPrice": 49.99,
       "badge": "Best Seller",
       "tags": ["Public Speaking"],
-      "image": "/speaking.webp",
+      "image": "/sampleimages/speaking.webp",
       "description": "Communicate clearly, confidently, and professionally."
     },
     {
@@ -277,7 +277,7 @@
       "oldPrice": 39.99,
       "badge": "Popular",
       "tags": ["Presentation Skills"],
-      "image": "/presentation.jpg",
+      "image": "/sampleimages/presentation.jpg",
       "description": "Overcome fear and deliver powerful presentations."
     },
     {
@@ -291,7 +291,7 @@
       "oldPrice": 59.99,
       "badge": "Top Rated",
       "tags": ["Business Communication", "Email Writing and Etiquette"],
-      "image": "/business.webp",
+      "image": "/sampleimages/business.webp",
       "description": "Master communication in a business environment."
     }
   ],

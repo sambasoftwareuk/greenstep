@@ -13,7 +13,7 @@ export const CareerCard = ({
 }) => {
   return (
     <div className=" rounded-xl overflow-hidden shadow-md border p-4 ">
-      <CardImage imageLink="/learner-centered.jpg" alt="careerCard" />
+      <CardImage imageLink="/sampleimages/learner-centered.jpg" alt="careerCard" />
       <div className="mt-4">
         <Header3 className="text-gray-800">{title}</Header3>
         <p className="text-sm text-gray-600 mt-1">
