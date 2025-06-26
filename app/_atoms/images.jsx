@@ -11,13 +11,13 @@ const getImageSlug = (imageLink) =>
         .replace(/\.[^/.]+$/, "")
     : "generic-image";
 
-export const SliderImage = ({ imageLink, imageAlt }) => {
+export const SliderImage = ({ imageLink, imageAlt, orientation }) => {
   const src = useMemo(() => getSrc(imageLink), [imageLink]);
   const randomImageAlt = useMemo(() => getImageSlug(imageLink), [imageLink]);
   return (
-    <div className="mx-auto w-full max-w-[1350px]">
-      <div className="custom:block relative h-[250px] w-full overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1350px] h-full">
+    <div className="mx-auto w-full max-w-[1600px]">
+      <div className="custom:block relative h-[600px] w-[60%] ml-[20%] overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full">
           <Image
             src={src}
             alt={`slider-image-${imageAlt ? imageAlt : randomImageAlt}`}
