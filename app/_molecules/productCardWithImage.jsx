@@ -6,10 +6,11 @@ const ProductCardWithImage = ({
   title,
   imageLink,
   variant = 1,
+  button = true,
   buttonLabel = "INCELE",
 }) => {
   const Title = (
-    <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-4">
+    <h2 className="text-xl md:text-2xl font-bold text-blue-600 mt-8 mb-4">
       {title}
     </h2>
   );
@@ -22,11 +23,11 @@ const ProductCardWithImage = ({
     </div>
   );
 
-  const Button = (
+  const Button = button ? (
     <div className="flex text-center justify-center mt-4">
       <PrimaryButton label={buttonLabel} className="rounded-full" />
     </div>
-  );
+  ) : null;
 
   const variantMap = {
     1: [Title, Image, Button],
@@ -39,8 +40,8 @@ const ProductCardWithImage = ({
   return (
     <div className="group bg-white flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
       {content.map((element, index) => (
-      <React.Fragment key={index}>{element}</React.Fragment>
-    ))}
+        <React.Fragment key={index}>{element}</React.Fragment>
+      ))}
     </div>
   );
 };

@@ -17,7 +17,10 @@ export const CarouselSlider = ({
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const childArray = useMemo(() => React.Children.toArray(children), [children] );
+  const childArray = useMemo(
+    () => React.Children.toArray(children),
+    [children]
+  );
   const totalSlides = Math.ceil(childArray.length / itemsPerSlide);
   const isScrollMode = variant === "scroll";
 
@@ -52,8 +55,16 @@ export const CarouselSlider = ({
   };
 
   const goToSlide = (index) => setCurrentIndex(index);
-  const nextSlide = () => setCurrentIndex((prev) => Math.min(prev + 1, totalSlides - 1));
-  const prevSlide = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
+  const nextSlide = () => {
+    setCurrentIndex((prev) => {
+      const nextIndex = prev + itemsPerSlide;
+      return nextIndex >= childArray.length ? prev : nextIndex;
+    });
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => Math.max(prev - itemsPerSlide, 0));
+  };
 
   // Scroll variant
   if (isScrollMode) {
@@ -62,27 +73,30 @@ export const CarouselSlider = ({
         {showArrows && canScrollLeft && (
           <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
             <DirectionButton
-          icon={<Icon variant={ChevronLeft} size={32} />}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
-          onClick={scrollLeft}
-        />
+              icon={<Icon variant={ChevronLeft} size={32} />}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
+              onClick={scrollLeft}
+            />
           </div>
         )}
 
         {showArrows && canScrollRight && (
-          
-            <DirectionButton
-          icon={<Icon variant={ChevronRight} size={32} />}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
-          onClick={scrollRight}
-        />
-          
+          <DirectionButton
+            icon={<Icon variant={ChevronRight} size={32} />}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
+            onClick={scrollRight}
+          />
         )}
 
-        <div ref={scrollRef} className="overflow-x-auto scrollbar-hide px-8 py-2">
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto scrollbar-hide px-8 py-2"
+        >
           <div className="flex gap-2">
             {childArray.map((child, i) => (
-              <div key={i} className="shrink-0">{child}</div>
+              <div key={i} className="shrink-0">
+                {child}
+              </div>
             ))}
           </div>
         </div>
@@ -94,30 +108,28 @@ export const CarouselSlider = ({
   return (
     <div className="relative w-full">
       {showArrows && currentIndex > 0 && (
-       
-          <DirectionButton
+        <DirectionButton
           icon={<Icon variant={ChevronLeft} size={32} />}
           className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
           onClick={prevSlide}
         />
       )}
-
-      {showArrows && currentIndex < totalSlides - 1 && (
-        
-          <DirectionButton
+      {showArrows && currentIndex < (totalSlides - 1) * itemsPerSlide && (
+        <DirectionButton
           icon={<Icon variant={ChevronRight} size={32} />}
           className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
           onClick={nextSlide}
         />
-        
       )}
 
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            transform: `translateX(-${currentIndex * (100 / itemsPerSlide)}%)`,
-            width: `${(childArray.length / itemsPerSlide) * 100}%`,
+            transform: `translateX(-${
+              (currentIndex * 100) / childArray.length
+            }%)`,
+            width: `${(childArray.length * 100) / itemsPerSlide}%`,
           }}
         >
           {childArray.map((child, i) => (
@@ -155,28 +167,32 @@ export const ImageSlider = ({
   showDots = true,
   showArrows = true,
 }) => {
-  const [index, setIndex] = useState(0)
-  const items = Array.isArray(children) ? children : [children]
-  const intervalRef = useRef(null)
+  const [index, setIndex] = useState(0);
+  const items = Array.isArray(children) ? children : [children];
+  const intervalRef = useRef(null);
 
-  const isAutoSlide = variant === 'autoSlide'
-  const showByIndex = typeof variant === 'undefined'
-  const alwaysShowControls = variant === 'infinite' || isAutoSlide
+  const isAutoSlide = variant === "autoSlide";
+  const showByIndex = typeof variant === "undefined";
+  const alwaysShowControls = variant === "infinite" || isAutoSlide;
 
-  const showLeft = showArrows && (alwaysShowControls || (showByIndex && index > 0))
-  const showRight = showArrows && (alwaysShowControls || (showByIndex && index < items.length - 1))
+  const showLeft =
+    showArrows && (alwaysShowControls || (showByIndex && index > 0));
+  const showRight =
+    showArrows &&
+    (alwaysShowControls || (showByIndex && index < items.length - 1));
 
-  const next = () => setIndex((prev) => (prev + 1) % items.length)
-  const prev = () => setIndex((prev) => (prev - 1 + items.length) % items.length)
-  const goTo = (i) => setIndex(i)
+  const next = () => setIndex((prev) => (prev + 1) % items.length);
+  const prev = () =>
+    setIndex((prev) => (prev - 1 + items.length) % items.length);
+  const goTo = (i) => setIndex(i);
 
   // Auto Slide Effect
   useEffect(() => {
     if (isAutoSlide) {
-      intervalRef.current = setInterval(next, 5000)
-      return () => clearInterval(intervalRef.current)
+      intervalRef.current = setInterval(next, 5000);
+      return () => clearInterval(intervalRef.current);
     }
-  }, [isAutoSlide])
+  }, [isAutoSlide]);
 
   return (
     <div className="relative w-full overflow-hidden mx-auto">
@@ -200,7 +216,7 @@ export const ImageSlider = ({
               key={i}
               onClick={() => goTo(i)}
               className={`w-3 h-3 rounded-full ${
-                i === index ? 'bg-black' : 'bg-gray-300'
+                i === index ? "bg-black" : "bg-gray-300"
               } transition-colors duration-300`}
             />
           ))}
@@ -223,5 +239,5 @@ export const ImageSlider = ({
         />
       )}
     </div>
-  )
+  );
 };

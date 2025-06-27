@@ -14,7 +14,7 @@ import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
 import products from "../constants/bigCardProducts.json";
-import MainProductComponent from "../_components/CardWithBigImage";
+import MainProductComponent from "../_components/MainProductComponent.jsx";
 
 const page = () => {
   return (

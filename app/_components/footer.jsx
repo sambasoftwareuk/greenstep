@@ -75,7 +75,7 @@ export function Footer() {
       <div className="bg-gray-950 w-full text-sm text-white py-6 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <LogoImage imageLink="/logo.jpg" />
+            <LogoImage imageLink="/green-step-logo.png" />
             <span>
               © {new Date().getFullYear()} SambaAcademy, Inc. All rights
               reserved.
