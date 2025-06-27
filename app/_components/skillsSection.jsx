@@ -67,7 +67,7 @@ const SkillsSection = ({ courses }) => {
           No course found
         </div>
       ) : (
-        <CarouselSlider itemsPerSlide={3} showDots={true}>
+        <CarouselSlider itemsPerSlide={6} showDots={true}>
           {filteredCourses?.map((course) => (
             <div key={course?.id} className="mt-8">
               <CourseCard course={course} />
