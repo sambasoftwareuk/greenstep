@@ -18,5 +18,25 @@
     "id": 4,
     "title": "İnşai Tip Su Soğutma Kuleleri",
     "image": "/tek-hucreli.png"
+  },
+  {
+    "id": 5,
+    "title": "Paket Tipi Soğutma Kuleleri",
+    "image": "/tek-hucreli.png"
+  },
+  {
+    "id": 6,
+    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "image": "/iki-hucreli.png"
+  },
+  {
+    "id": 7,
+    "title": "Paket Tipi Soğutma Kuleleri",
+    "image": "/uc-hucreli.png"
+  },
+  {
+    "id": 8,
+    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "image": "/tek-hucreli.png"
   }
 ]
