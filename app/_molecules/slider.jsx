@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "../_atoms/Icons";
 import { DirectionButton } from "../_atoms/buttons";
@@ -162,18 +161,21 @@ export const CarouselSlider = ({
 };
 
 export const ImageSlider = ({
+  size = "sm",
   children,
   variant,
   showDots = true,
   showArrows = true,
 }) => {
-  const [index, setIndex] = useState(0);
-  const items = Array.isArray(children) ? children : [children];
-  const intervalRef = useRef(null);
+  const [index, setIndex] = useState(0)
+  const items = Array.isArray(children) ? children : [children]
+  const intervalRef = useRef(null)
+  const sliderRef = useRef(null)
 
-  const isAutoSlide = variant === "autoSlide";
-  const showByIndex = typeof variant === "undefined";
-  const alwaysShowControls = variant === "infinite" || isAutoSlide;
+  const isAutoSlide = variant === "autoSlide"
+  const showByIndex = typeof variant === "undefined"
+  const alwaysShowControls = variant === "infinite" || isAutoSlide
+
 
   const showLeft =
     showArrows && (alwaysShowControls || (showByIndex && index > 0));
@@ -186,7 +188,7 @@ export const ImageSlider = ({
     setIndex((prev) => (prev - 1 + items.length) % items.length);
   const goTo = (i) => setIndex(i);
 
-  // Auto Slide Effect
+  // Auto Slide
   useEffect(() => {
     if (isAutoSlide) {
       intervalRef.current = setInterval(next, 5000);
@@ -194,11 +196,56 @@ export const ImageSlider = ({
     }
   }, [isAutoSlide]);
 
+  // Touch Swipe Support
+  useEffect(() => {
+    let startX = 0
+    let endX = 0
+
+    const handleTouchStart = (e) => {
+      startX = e.touches[0].clientX
+    }
+
+    const handleTouchMove = (e) => {
+      endX = e.touches[0].clientX
+    }
+
+    const handleTouchEnd = () => {
+      const diff = startX - endX
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) next()
+        else prev()
+      }
+    }
+
+    const el = sliderRef.current
+    if (el) {
+      el.addEventListener("touchstart", handleTouchStart)
+      el.addEventListener("touchmove", handleTouchMove)
+      el.addEventListener("touchend", handleTouchEnd)
+    }
+
+    return () => {
+      if (el) {
+        el.removeEventListener("touchstart", handleTouchStart)
+        el.removeEventListener("touchmove", handleTouchMove)
+        el.removeEventListener("touchend", handleTouchEnd)
+      }
+    }
+  }, [])
+
   return (
-    <div className="relative w-full overflow-hidden mx-auto">
-      {/* Slider container */}
+    <div ref={sliderRef} className="relative w-full overflow-hidden mx-auto">
+      {/* Slide Container */}
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className={`flex w-full transition-transform duration-500 ease-in-out ${
+          size === "sm"
+            ? "h-[250px]"
+            : size === "md"
+            ? "h-[300px]"
+            : size === "lg"
+            ? "h-[450px] sm:h-[600px]"
+            : ""
+        }`}
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {items.map((child, i) => (
@@ -210,7 +257,7 @@ export const ImageSlider = ({
 
       {/* Dots */}
       {showDots && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 space-x-2">
           {items.map((_, i) => (
             <button
               key={i}
@@ -223,21 +270,22 @@ export const ImageSlider = ({
         </div>
       )}
 
-      {/* Controls */}
+      {/* Arrows (only md and up) */}
       {showLeft && (
         <DirectionButton
           icon={<Icon variant={ChevronLeft} size={32} />}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
           onClick={prev}
         />
       )}
       {showRight && (
         <DirectionButton
           icon={<Icon variant={ChevronRight} size={32} />}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
+          className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow"
           onClick={next}
         />
       )}
     </div>
-  );
-};
+  )
+}
+

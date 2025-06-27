@@ -1,12 +1,12 @@
 import ImageSliderComponent from "./_components/imageSliderComponent";
-import images from "./constants/images";
+import images from "./mocks/images";
 import coursesFromMock from "./mocks/courses.json";
 import MainProductComponent from "./_components/MainProductComponent.jsx";
 import products from "./constants/bigCardProducts.json";
+import sliderData from "./mocks/sliderData.json";
 import { CarouselSlider, ImageSlider } from "./_molecules/slider";
 import ProductCardWithImage from "./_molecules/productCardWithImage";
 import ProductCarousel from "./_components/ProductCarousel";
-// import SkillsSection from "./_components/skillsSection";
 // import LearningPathwayComponent from "./_components/learningPathwayComponent";
 // import MainTabComponent from "./_components/mainTabComponent";
 // import ReferenceComponent from "./_components/referanceComponent";
@@ -23,7 +23,7 @@ export default function Home() {
   const { mockCourses } = coursesFromMock;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <ImageSliderComponent images={images} />
+      <ImageSliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
       <MainProductComponent products={products} />
       <ProductCarousel products={products} title="Featured Products" />
 
