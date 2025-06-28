@@ -7,6 +7,7 @@ import sliderData from "./mocks/sliderData.json";
 import { CarouselSlider, ImageSlider } from "./_molecules/slider";
 import ProductCardWithImage from "./_molecules/productCardWithImage";
 import ProductCarousel from "./_components/ProductCarousel";
+import ProductBanner from "./_molecules/productBanner";
 // import LearningPathwayComponent from "./_components/learningPathwayComponent";
 // import MainTabComponent from "./_components/mainTabComponent";
 // import ReferenceComponent from "./_components/referanceComponent";
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <ImageSliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
+      <ProductBanner/>
       <MainProductComponent products={products} />
       <ProductCarousel products={products} title="Featured Products" />
 
