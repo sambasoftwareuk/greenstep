@@ -23,7 +23,11 @@ export default function Home() {
   const { mockCourses } = coursesFromMock;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <ImageSliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
+      <ImageSliderComponent
+        size={"lg"}
+        sliderData={sliderData}
+        orientation={"split-horizontal"}
+      />
       <MainProductComponent products={products} />
       <ProductCarousel products={products} title="Featured Products" />
 

@@ -8,6 +8,8 @@ const ProductCardWithImage = ({
   variant = 1,
   button = true,
   buttonLabel = "INCELE",
+  aspectRatio,
+  className = "",
 }) => {
   const Title = (
     <h2 className="text-xl md:text-2xl font-bold text-blue-600 mt-8 mb-4">
@@ -18,7 +20,11 @@ const ProductCardWithImage = ({
   const Image = (
     <div className="overflow-hidden rounded-md my-5">
       <div className="transition-transform duration-300 ease-in-out group-hover:scale-105">
-        <CardImage imageLink={imageLink} imageAlt="product" />
+        <CardImage
+          imageLink={imageLink}
+          imageAlt="product"
+          aspectRatio={aspectRatio}
+        />
       </div>
     </div>
   );
@@ -38,7 +44,9 @@ const ProductCardWithImage = ({
   const content = variantMap[variant] || variantMap[1];
 
   return (
-    <div className="group bg-white flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
+    <div
+      className={`group bg-white w-full flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02] ${className}`}
+    >
       {content.map((element, index) => (
         <React.Fragment key={index}>{element}</React.Fragment>
       ))}
