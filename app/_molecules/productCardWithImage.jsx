@@ -70,7 +70,7 @@ const ProductCardWithImage = ({
 
   return (
     <div
-      className={`group bg-white w-full flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02] ${className}`}
+      className={"group bg-white w-full flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]"}
     >
       {content.map((element, index) => (
         <React.Fragment key={index}>{element}</React.Fragment>
