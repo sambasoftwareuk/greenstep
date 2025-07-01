@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import { Footer } from "./_components/footer";
-import HamburgerMenu from "./_components/hamburgerMenu";
 import AnnouncementBand from "./_components/announcementBand";
 
 const geistSans = Geist({
@@ -33,13 +32,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
         <AnnouncementBand />
-        <div className="hidden xl:block sticky top-0 z-50">
-          <Navbar />
-        </div>
-        <div className="block xl:hidden">
-          <HamburgerMenu />
-        </div>
-
+        <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
