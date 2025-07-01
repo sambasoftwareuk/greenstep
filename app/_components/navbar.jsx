@@ -12,14 +12,14 @@ const Navbar = () => {
     <header className="w-full border-b bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 md:px-8 py-3 gap-2 max-w-full">
         {/* Logo */}
-        <div className="mr-28">
+        <div>
           <Link href="/">
             <LogoImage imageLink={Logo.imageLink} width={200} height={40} />
           </Link>
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex flex-grow justify-center items-center ">
+        <div className="hidden xl:flex flex-grow justify-center items-center ">
           <IconOnlyButton icon={<Icon variant={Home} size={20} />} />
           {navLinks.map(({ label, href, className, dropdown }) => (
             <div key={label} className="relative group">

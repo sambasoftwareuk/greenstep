@@ -32,17 +32,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
-            <AnnouncementBand />
-          <div className="hidden md:block">
-            <Navbar />
-          </div>
-          <div className="block md:hidden">
-            <HamburgerMenu />
-          </div>
-        
-          <main>{children}</main>
+        <AnnouncementBand />
+        <div className="hidden xl:block sticky top-0 z-50">
+          <Navbar />
+        </div>
+        <div className="block xl:hidden">
+          <HamburgerMenu />
+        </div>
+
+        <main>{children}</main>
         <Footer />
-        
       </body>
     </html>
   );
