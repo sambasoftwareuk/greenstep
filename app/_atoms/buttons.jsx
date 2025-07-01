@@ -1,7 +1,7 @@
 export function BaseButton({ children, className = "", ...props }) {
   return (
     <button
-      className={`py-2 px-4 rounded focus:outline-none transition-all ${className} flex justify-center items-center`}
+      className={`py-2 px-2 md:px-4 text-sm md:text-base rounded focus:outline-none transition-all ${className} flex justify-center items-center`}
       {...props}
     >
       {children}

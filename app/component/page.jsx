@@ -1,12 +1,12 @@
 
-import ImageSliderComponent from '../_components/imageSliderComponent'
+import SliderComponent from '../_components/sliderComponent'
 import images from '../mocks/images.json'
 import sliderData from '../mocks/sliderData.json'
 
 const page = () => {
   return (
     <div>
-      <ImageSliderComponent images={images} size={"lg"} sliderData={sliderData} />
+      <SliderComponent images={images} size={"lg"} sliderData={sliderData} />
     </div>
   )
 }
