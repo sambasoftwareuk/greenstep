@@ -1,6 +1,6 @@
 import React from "react";
 import { CardImage } from "../_atoms/images";
-import { ChevronLeft } from "../_atoms/icons";
+import { ChevronLeft } from "../_atoms/Icons";
 import Link from "next/link";
 
 const BlogCard = ({
