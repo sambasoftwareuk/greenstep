@@ -19,13 +19,14 @@ import ProductBanner from "./_molecules/productBanner";
 // import GoalsComponent from "./_components/goalsComponent";
 // import TestimonialComponent from "./_components/testimonialComponent";
 // import SkillsSection from "./_components/skillsSection";
+import bannerProducts from "./constants/bannerProducts.json";
 
 export default function Home() {
   // const { mockCourses } = coursesFromMock;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <ImageSliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
-      <ProductBanner/>
+      <ProductBanner bannerProducts={bannerProducts}/>
       <MainProductComponent products={products} />
       <ProductCarousel products={products} title="Featured Products" />
 
