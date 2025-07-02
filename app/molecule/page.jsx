@@ -15,6 +15,8 @@ import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
 import products from "../constants/bigCardProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
+import BlogCard from "../_molecules/blogCard";
+import blogData from "../constants/blogData.json";
 
 const page = () => {
   return (
@@ -101,6 +103,22 @@ const page = () => {
       </div>
       <LearnCard />
       <MainProductComponent products={products} />
+      <div className="flex flex-col justify-center items-center m-4">
+        <h1 className="font-bold text-lg mb-10">BLOG</h1>
+        <div className="mt-2 flex w-4/5 m-auto justify-center gap-6 h-1/4 flex-wrap">
+          {blogData.map((post, index) => (
+            <BlogCard
+              key={index}
+              imageLink={post.imageLink}
+              imageAlt={post.imageAlt}
+              date={post.date}
+              title={post.title}
+              excerpt={post.excerpt}
+              aspectRatio={post.aspectRatio}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
