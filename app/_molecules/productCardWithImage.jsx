@@ -5,14 +5,16 @@ import { PrimaryButton } from "../_atoms/buttons";
 const ProductCardWithImage = ({
   title,
   imageLink,
+  layout = "vertical",
   variant = 1,
   button = true,
   buttonLabel = "INCELE",
-  aspectRatio,
-  className = "",
+  imagePosition = "left",
+  titleFontSize = "text-xl md:text-2xl",
+  titleColor = "text-blue-600",
 }) => {
   const Title = (
-    <h2 className="text-xl md:text-2xl font-bold text-blue-600 mt-8 mb-4">
+    <h2 className={`${titleFontSize} font-bold ${titleColor} mb-4 mt-8`}>
       {title}
     </h2>
   );
@@ -20,11 +22,7 @@ const ProductCardWithImage = ({
   const Image = (
     <div className="overflow-hidden rounded-md my-5">
       <div className="transition-transform duration-300 ease-in-out group-hover:scale-105">
-        <CardImage
-          imageLink={imageLink}
-          imageAlt="product"
-          aspectRatio={aspectRatio}
-        />
+        <CardImage imageLink={imageLink} imageAlt={title} />
       </div>
     </div>
   );
@@ -34,6 +32,33 @@ const ProductCardWithImage = ({
       <PrimaryButton label={buttonLabel} className="rounded-full" />
     </div>
   ) : null;
+
+  if (layout === "horizontal") {
+    const imageContent = <div className="w-full md:w-1/2">{Image}</div>;
+
+    const textContent = (
+      <div className="w-full md:w-1/2 p-4 flex flex-col justify-center text-left">
+        {Title}
+        {Button}
+      </div>
+    );
+
+    return (
+      <div className="group bg-white flex flex-col md:flex-row rounded-lg shadow p-4 my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]">
+        {imagePosition === "left" ? (
+          <>
+            {imageContent}
+            {textContent}
+          </>
+        ) : (
+          <>
+            {textContent}
+            {imageContent}
+          </>
+        )}
+      </div>
+    );
+  }
 
   const variantMap = {
     1: [Title, Image, Button],
