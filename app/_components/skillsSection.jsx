@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from "react";
 import { CourseTagButton } from "../_atoms/buttons";
-import { CarouselSlider } from "../_molecules/slider";
+import { SambaSlider } from "../_molecules/slider";
 import links from "../mocks/courses.json";
 import TabMenu from "../_molecules/tabMenu";
 import CourseCard from "../_molecules/courseCard";
@@ -50,7 +50,7 @@ const SkillsSection = ({ courses }) => {
       />
 
       {/* Tags */}
-      <CarouselSlider variant="scroll" showArrows={true} showDots={false}>
+      <SambaSlider variant="scroll" showArrows={true} showDots={false}>
         {(tagMap[activeTabName] || []).map((tag) => (
           <CourseTagButton
             key={tag}
@@ -59,7 +59,7 @@ const SkillsSection = ({ courses }) => {
             onClick={() => setActiveTag(tag)}
           />
         ))}
-      </CarouselSlider>
+      </SambaSlider>
 
       {/* Courses */}
       {filteredCourses && filteredCourses.length === 0 ? (
@@ -67,13 +67,13 @@ const SkillsSection = ({ courses }) => {
           No course found
         </div>
       ) : (
-        <CarouselSlider itemsPerSlide={6} showDots={true}>
+        <SambaSlider itemsPerSlide={6} showDots={true}>
           {filteredCourses?.map((course) => (
             <div key={course?.id} className="mt-8">
               <CourseCard course={course} />
             </div>
           ))}
-        </CarouselSlider>
+        </SambaSlider>
       )}
     </div>
   );

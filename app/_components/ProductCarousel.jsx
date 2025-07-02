@@ -1,5 +1,5 @@
 import React from "react";
-import { CarouselSlider, ImageSlider } from "../_molecules/slider";
+import { SambaSlider } from "../_molecules/slider";
 import ProductCardWithImage from "../_molecules/productCardWithImage";
 
 const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
@@ -9,7 +9,7 @@ const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
         <h2 className="text-xl font-semibold mb-4 text-center">{title}</h2>
       )}
 
-      <CarouselSlider
+      <SambaSlider
         variant="slide"
         showDots={false}
         showArrows={true}
@@ -25,7 +25,7 @@ const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
             />
           </div>
         ))}
-      </CarouselSlider>
+      </SambaSlider>
     </div>
   );
 };

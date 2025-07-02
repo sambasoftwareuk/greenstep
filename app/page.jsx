@@ -1,13 +1,9 @@
-import ImageSliderComponent from "./_components/imageSliderComponent";
-// import images from "./mocks/images";
-// import coursesFromMock from "./mocks/courses.json";
 import MainProductComponent from "./_components/MainProductComponent.jsx";
 import products from "./constants/bigCardProducts.json";
 import sliderData from "./mocks/sliderData.json";
-// import { CarouselSlider, ImageSlider } from "./_molecules/slider";
-// import ProductCardWithImage from "./_molecules/productCardWithImage";
 import ProductCarousel from "./_components/ProductCarousel";
 import ProductBanner from "./_molecules/productBanner";
+import SliderComponent from "./_components/sliderComponent.jsx";
 // import LearningPathwayComponent from "./_components/learningPathwayComponent";
 // import MainTabComponent from "./_components/mainTabComponent";
 // import ReferenceComponent from "./_components/referanceComponent";
@@ -22,14 +18,12 @@ import ProductBanner from "./_molecules/productBanner";
 import bannerProducts from "./constants/bannerProducts.json";
 
 export default function Home() {
-  // const { mockCourses } = coursesFromMock;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <ImageSliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
+      <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
       <ProductBanner bannerProducts={bannerProducts}/>
       <MainProductComponent products={products} />
       <ProductCarousel products={products} title="Featured Products" />
-
       {/* <LearningPathwayComponent careers={careers} />
       <MainTabComponent tabs={tabs} />
       <ReferenceComponent referanceImages={referanceImages} />

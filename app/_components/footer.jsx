@@ -1,4 +1,3 @@
-"use client";
 import { SambaLinks } from "../_atoms/SambaLinks";
 import Icon from "../_atoms/Icon";
 import { Globe } from "../_atoms/Icons";
