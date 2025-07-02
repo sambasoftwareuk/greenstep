@@ -12,7 +12,6 @@ export function Footer() {
         <span className="font-semibold text-white">Top companies</span> choose{" "}
         <SambaLinks color="sunshine" className="font-semibold">
           Samba Business
-          {console.log("Samba Business") /* This is just a placeholder for the actual link */ }
         </SambaLinks>{" "}
         to build in-demand career skills.
       </div>
