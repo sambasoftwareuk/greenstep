@@ -8,10 +8,9 @@ const AnnouncementBand = () => {
       className="
         hidden lg:flex
         w-full bg-primary h-12
-        items-center justify-center
+        items-center justify-around
         px-4 text-md text-black
-        gap-28
-        sm:gap-16 md:gap-12 lg:gap-20
+        
         text-sm md:text-base lg:text-md
       "
     >
@@ -35,17 +34,17 @@ const AnnouncementBand = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-3  text-white text-xs md:text-sm lg:text-base text-center">
+      <div className="flex flex-wrap items-center justify-center text-white text-xs md:text-sm lg:text-base text-center">
         <Link
           href="https://maps.google.com/?q=Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:underline cursor-pointer"
+          className="hover:underline cursor-pointer mr-4"
         >
           Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL
         </Link>
 
-        <Link href="tel:+902163046868" className="hover:underline">
+        <Link href="tel:+902163046868" className="hover:underline mr-4">
           +90 216 304 68 68
         </Link>
 
