@@ -2,7 +2,7 @@ import React from "react";
 import { SambaSlider } from "../_molecules/slider";
 import ProductCardWithImage from "../_molecules/productCardWithImage";
 
-const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
+const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinite }) => {
   return (
     <div className="mt-2 ">
       {title && (
@@ -14,8 +14,10 @@ const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
         showDots={false}
         showArrows={true}
         itemsPerSlide={itemsPerSlide}
+        isAutoSlide={isAutoSlide}
+        isInfinite={isInfinite}
       >
-        {products.map((product) => (
+        {data.map((product) => (
           <div key={product.id} className="px-2">
             <ProductCardWithImage
               title={product.title}
@@ -30,4 +32,4 @@ const ProductCarousel = ({ products, itemsPerSlide = 4, title }) => {
   );
 };
 
-export default ProductCarousel;
+export default CarouselSlider;
