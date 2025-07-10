@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Otomasyon hizmeti",
+    "image": "/tek-hucreli.png"
+  },
+  {
+    "id": 2,
+    "title": "Tasarım Hizmeti",
+    "image": "/iki-hucreli.png"
+  },
+  {
+    "id": 3,
+    "title": "Bakım Onarım Hizmeti",
+    "image": "/uc-hucreli.png"
+  },
+  {
+    "id": 4,
+    "title": "Montaj-Demontaj Hizmeti",
+    "image": "/tek-hucreli.png"
+  },
+  {
+    "id": 5,
+    "title": "Enerji Analiz Hizmeti",
+    "image": "/tek-hucreli.png"
+  }
+]
