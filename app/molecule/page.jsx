@@ -17,10 +17,15 @@ import products from "../mocks/bigCardProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../constants/blogData.json";
+import Breadcrumb from "../_molecules/breadCrumb";
+import { Home } from "../_atoms/Icons";
+import Icon from "../_atoms/Icon";
 
 const page = () => {
+
   return (
     <div className="p-4">
+      <Breadcrumb />
       <CourseCard course={courses.mockCourses[0]} />
       <SliderCard
         title="Stay One Step Ahead"
