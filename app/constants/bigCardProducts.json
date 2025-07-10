@@ -1,32 +1,12 @@
 [
-  {
-    "id": 1,
-    "title": "Monoblok Antibakteriyel Kuleler",
-    "image": "/tek-hucreli.png"
-  },
-  {
-    "id": 2,
-    "title": "Düz Güverteli Paket Kuleler",
-    "image": "/iki-hucreli.png"
-  },
-  {
-    "id": 3,
-    "title": "Kapalı Devre Kuleler",
-    "image": "/uc-hucreli.png"
-  },
-  {
-    "id": 4,
-    "title": "İnşai Tip Kuleler",
-    "image": "/tek-hucreli.png"
-  },
-  {
-    "id": 5,
-    "title": "Soğutma Kulesi Yedek Parçaları",
-    "image": "/tek-hucreli.png"
-  },
-  {
-    "id": 6,
-    "title": "Soğutma Kulesi Bakım Onarım İşleri",
-    "image": "/iki-hucreli.png"
-  }
+  { "id": 1, "title": "Rashing Halkası", "image": "/tek-hucreli.png" },
+  { "id": 2, "title": "Fan Sistemleri", "image": "/tek-hucreli.png" },
+  { "id": 3, "title": "Bigudi", "image": "/tek-hucreli.png" },
+  { "id": 4, "title": "PVC Film Dolgu", "image": "/tek-hucreli.png" },
+  { "id": 5, "title": "Splash Grid Dolgu", "image": "/tek-hucreli.png" },
+  { "id": 6, "title": "Trickle Dolgu", "image": "/tek-hucreli.png" },
+  { "id": 7, "title": "Damla Tutucu", "image": "/tek-hucreli.png" },
+  { "id": 8, "title": "Serpantin", "image": "/tek-hucreli.png" },
+  { "id": 9, "title": "Vibrasyon Şalteri", "image": "/tek-hucreli.png" },
+  { "id": 10, "title": "Kademeli Nozul", "image": "/tek-hucreli.png" }
 ]
