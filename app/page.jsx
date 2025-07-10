@@ -1,5 +1,5 @@
 import MainProductComponent from "./_components/MainProductComponent.jsx";
-import products from "./mocks/bigCardProducts.json";
+import products from "./constants/bigCardProducts.json";
 import services from "./mocks/services.json";
 import sliderData from "./mocks/sliderData.json";
 import ProductBanner from "./_molecules/productBanner";

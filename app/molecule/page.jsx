@@ -13,7 +13,7 @@ import { TestimonialCard } from "../_molecules/testimonialCard";
 import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
-import products from "../mocks/bigCardProducts.json";
+import products from "../constants/bigCardProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../constants/blogData.json";
