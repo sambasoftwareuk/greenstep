@@ -1,42 +1,32 @@
 [
   {
     "id": 1,
-    "title": "Paket Tipi Soğutma Kuleleri",
+    "title": "Monoblok Antibakteriyel Kuleler",
     "image": "/tek-hucreli.png"
   },
   {
     "id": 2,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "title": "Düz Güverteli Paket Kuleler",
     "image": "/iki-hucreli.png"
   },
   {
     "id": 3,
-    "title": "Paket Tipi Soğutma Kuleleri",
+    "title": "Kapalı Devre Kuleler",
     "image": "/uc-hucreli.png"
   },
   {
     "id": 4,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "title": "İnşai Tip Su Kuleler",
     "image": "/tek-hucreli.png"
   },
   {
     "id": 5,
-    "title": "Paket Tipi Soğutma Kuleleri",
+    "title": "Soğutma Kulesi Yedek Parçaları",
     "image": "/tek-hucreli.png"
   },
   {
     "id": 6,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "title": "Soğutma Kulesi Bakım Onarım İşleri",
     "image": "/iki-hucreli.png"
-  },
-  {
-    "id": 7,
-    "title": "Paket Tipi Soğutma Kuleleri",
-    "image": "/uc-hucreli.png"
-  },
-  {
-    "id": 8,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
-    "image": "/tek-hucreli.png"
   }
 ]
