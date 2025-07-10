@@ -17,10 +17,20 @@ import products from "../constants/bigCardProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../constants/blogData.json";
+import Breadcrumb from "../_molecules/breadCrumb";
+import { Home } from "../_atoms/Icons";
+import Icon from "../_atoms/Icon";
 
 const page = () => {
+  const breadcrumbItems = [
+    { label: <Icon variant={Home} size={18} className="text-primary" />, href: "/" },
+    { label: "Molecule", href: "/molecule" },
+    { label: "Breadcrumb", href: null }
+  ];
+
   return (
     <div className="p-4">
+      <Breadcrumb items={breadcrumbItems} />
       <CourseCard course={courses.mockCourses[0]} />
       <SliderCard
         title="Stay One Step Ahead"
