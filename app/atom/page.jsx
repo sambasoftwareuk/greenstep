@@ -38,6 +38,7 @@ import { LabelPrimary, LabelSecondary } from "../_atoms/labels";
 import { SambaLinks } from "../_atoms/SambaLinks";
 import { ShowMoreButton } from "../_atoms/showMoreButton";
 import { Checkbox } from "../_atoms/checkbox";
+import Breadcrumb from "../_molecules/breadCrumb";
 
 const page = () => {
   const [showAll, setShowAll] = useState(false);
@@ -45,6 +46,7 @@ const page = () => {
 
   return (
     <div className="p-4">
+      <Breadcrumb />
       <div className="flex flex-wrap gap-2">
         <Icon variant={Cart} size={32} color="text-primary900" />
         <Icon variant={Search} size={32} color="text-sunshine" />
