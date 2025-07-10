@@ -1,22 +1,22 @@
 [
  {
     "id": 1,
-    "title": "Paket Tipi Soğutma Kuleleri",
-    "image": "/tek-hucreli.png"
+    "title": "MONOBLOK ANTİBAKTERİYEL KULELER",
+    "image": "/mono-blok.png"
   },
   {
     "id": 2,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "title": "DÜZ GÜVERTELİ PAKET KULELER",
     "image": "/iki-hucreli.png"
   },
   {
     "id": 3,
-    "title": "Paket Tipi Soğutma Kuleleri",
+    "title": "KAPALI DEVRE KULELER",
     "image": "/uc-hucreli.png"
   },
   {
     "id": 4,
-    "title": "İnşai Tip Su Soğutma Kuleleri",
+    "title": "İNŞAİ TİP KULELER",
     "image": "/tek-hucreli.png"
   }
 ]
