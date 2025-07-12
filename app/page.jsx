@@ -10,11 +10,30 @@ import CarouselSlider from "./_components/CarouselSlider.jsx";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
-      <ProductBanner bannerProducts={bannerProducts}/>
+      <SliderComponent
+        size={"lg"}
+        sliderData={sliderData}
+        orientation={"split-horizontal"}
+      />
+      <ProductBanner bannerProducts={bannerProducts} />
       <MainProductComponent products={products} />
-      <CarouselSlider data={services} title="Hizmetlerimiz" isAutoSlide={true} isInfinite={true}  />
-      
+      <CarouselSlider
+        data={services}
+        title="Hizmetlerimiz"
+        isAutoSlide={true}
+        isInfinite={true}
+      />
+
+      {/* <ProductCarousel products={products} title="Featured Products" /> */}
+
+      {/* <LearningPathwayComponent careers={careers} />
+      <MainTabComponent tabs={tabs} />
+      <ReferenceComponent referanceImages={referanceImages} />
+      <PopularContentsComponent courses={mockCourses} />
+      <GoalsComponent />
+      <TestimonialComponent testimonialData={testimonialData} />
+      <SkillsSection courses={mockCourses} />
+       */}
     </div>
   );
 }

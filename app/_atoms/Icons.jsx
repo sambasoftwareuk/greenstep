@@ -290,17 +290,22 @@ export const socialIcons = [
       </svg>
     ),
   },
- {
-  alt: "YouTube",
-  href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225",
-  bgColor: "transparent",
-  svg: (
-    <svg width="35" height="35" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="25" cy="25" r="25" fill="#FF0000" />
-      <polygon points="20,15 20,35 35,25" fill="white" />
-    </svg>
-  ),
-},
+  {
+    alt: "YouTube",
+    href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225",
+    bgColor: "transparent",
+    svg: (
+      <svg
+        width="35"
+        height="35"
+        viewBox="0 0 50 50"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="25" cy="25" r="25" fill="#FF0000" />
+        <polygon points="20,15 20,35 35,25" fill="white" />
+      </svg>
+    ),
+  },
   {
     alt: "Twitter",
     href: "https://twitter.com/ctpmuhendislik",
@@ -332,3 +337,73 @@ export const socialIcons = [
     ),
   },
 ];
+
+export const Phone = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.89.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.4 22 2 13.6 2 3.5a1 1 0 011-1H6.5a1 1 0 011 1c0 1.36.26 2.68.76 3.89a1 1 0 01-.21 1.11l-2.2 2.2z" />
+  </svg>
+);
+
+export const Gallery = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M21 19V5c0-1.1-.9-2-2-2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+  </svg>
+);
+
+export const Services = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M19.14,12.94c0.04-0.31,0.06-0.63,0.06-0.94s-0.02-0.63-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61l-1.92-3.32c-0.11-0.2-0.36-0.28-0.57-0.2l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14,2.81C13.97,2.58,13.76,2.42,13.52,2.42h-3.04c-0.24,0-0.45,0.16-0.48,0.39l-0.36,2.43c-0.59,0.24-1.12,0.56-1.62,0.94L5.63,5.22c-0.21-0.08-0.46,0-0.57,0.2L3.14,8.74c-0.12,0.21-0.07,0.47,0.12,0.61l2.03,1.58C5.23,11.37,5.2,11.68,5.2,12s0.02,0.63,0.06,0.94l-2.03,1.58c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.11,0.2,0.36,0.28,0.57,0.2l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.43c0.03,0.23,0.24,0.39,0.48,0.39h3.04c0.24,0,0.45-0.16,0.48-0.39l0.36-2.43c0.59-0.24,1.12-0.56,1.62-0.94l2.39,0.96c0.21,0.08,0.46,0,0.57-0.2l1.92-3.32c0.12-0.21,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.99,0-3.6-1.61-3.6-3.6s1.61-3.6,3.6-3.6s3.6,1.61,3.6,3.6S13.99,15.6,12,15.6z" />
+  </svg>
+);
+
+export const Reference = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+  </svg>
+);
+
+export const Blog = ({ style, className = "" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="24px"
+    viewBox="0 0 24 24"
+    width="24px"
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M20 2H4c-1.1 0-2 .9-2 2v16l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 4H6v-2h8v2zm4-6H6V5h12v2z" />
+  </svg>
+);
