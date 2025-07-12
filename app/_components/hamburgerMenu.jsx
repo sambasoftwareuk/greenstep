@@ -26,7 +26,6 @@ import Logo from "../constants/logo.json";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { topLinks, exploreLinks, popularLinks, navLinks } = links;
   const iconMap = {
     Cart,
     Search,
