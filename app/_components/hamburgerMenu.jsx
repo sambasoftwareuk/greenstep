@@ -62,9 +62,9 @@ const HamburgerMenu = () => {
 
       {/* Overlay and Slide Menu */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex h-screen transition-transform duration-300 ease-in-out">
+        <div className="fixed inset-0 z-50 flex h-screen transition-transform duration-300 ease-in-out ">
           {/* Sidebar Menu (2/3) */}
-          <div className="w-5/6 bg-white h-full overflow-y-auto p-4 transform transition-all duration-300">
+          <div className="w-5/6 bg-white h-full overflow-y-auto p-4 transform transition-all duration-300 ">
             <div>
               <Link href="/">
                 <LogoImage imageLink={Logo.imageLink} width={200} height={40} />
@@ -105,26 +105,25 @@ const HamburgerMenu = () => {
                 })}
               </div>
             </div>
-            <div className="flex justify-center gap-4  mb-0  pt-4  ">
-              <div className="flex gap-2 items-center">
-                {socialIcons?.map(({ href, svg, alt, bgColor }) => (
-                  <Link
-                    key={alt}
-                    href={href}
-                    target="_blank"
-                    aria-label={alt}
-                    rel="noopener noreferrer"
-                    className="transition-transform transform hover:scale-125"
+
+            <div className="flex gap-2 items-center justify-center  mt-6">
+              {socialIcons?.map(({ href, svg, alt, bgColor }) => (
+                <Link
+                  key={alt}
+                  href={href}
+                  target="_blank"
+                  aria-label={alt}
+                  rel="noopener noreferrer"
+                  className="transition-transform transform hover:scale-125"
+                >
+                  <div
+                    style={{ backgroundColor: bgColor }}
+                    className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 flex items-center justify-center rounded-full"
                   >
-                    <div
-                      style={{ backgroundColor: bgColor }}
-                      className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 flex items-center justify-center rounded-full"
-                    >
-                      {svg}
-                    </div>
-                  </Link>
-                ))}
-              </div>
+                    {svg}
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
 
