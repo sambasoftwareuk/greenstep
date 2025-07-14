@@ -23,17 +23,6 @@ export default function Home() {
         isAutoSlide={true}
         isInfinite={true}
       />
-
-      {/* <ProductCarousel products={products} title="Featured Products" /> */}
-
-      {/* <LearningPathwayComponent careers={careers} />
-      <MainTabComponent tabs={tabs} />
-      <ReferenceComponent referanceImages={referanceImages} />
-      <PopularContentsComponent courses={mockCourses} />
-      <GoalsComponent />
-      <TestimonialComponent testimonialData={testimonialData} />
-      <SkillsSection courses={mockCourses} />
-       */}
     </div>
   );
 }
