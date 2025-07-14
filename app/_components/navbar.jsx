@@ -11,7 +11,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Hamburger Menu (below xl) */}
-      <div className="block xl:hidden sticky top-0 z-50">
+      <div className="block xl:hidden  ">
         <HamburgerMenu />
       </div>
     </>
