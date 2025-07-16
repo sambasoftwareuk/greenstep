@@ -1,7 +1,8 @@
 [
   {
     "label": "Kurumsal",
-    "href": "/kurumsal"
+    "href": "/kurumsal",
+    "iconName": "Home"
   },
   {
     "label": "Ürünlerimiz",
@@ -28,7 +29,8 @@
         "label": "Soğutma Kulesi Bakım Onarım İşleri",
         "href": "/urunler/bakim-onarim"
       }
-    ]
+    ],
+    "iconName": "Certificate"
   },
   {
     "label": "Yedek Parçalar",
@@ -50,11 +52,14 @@
         "href": "/yedek-parcalar/vibrasyon-salteri"
       },
       { "label": "Kademeli Nozul", "href": "/yedek-parcalar/kademeli-nozul" }
-    ]
+    ],
+    "iconName": "Cart"
   },
   {
     "label": "Hizmetlerimiz",
     "href": "/hizmetler",
+    "iconName": "Services",
+
     "dropdown": [
       { "label": "Otomasyon Hizmeti", "href": "/hizmetler/otomasyon" },
       { "label": "Tasarım Hizmeti", "href": "/hizmetler/tasarim" },
@@ -69,22 +74,27 @@
   {
     "label": "Galeri",
     "href": "/galeri",
+    "iconName": "Gallery",
     "dropdown": [{ "label": "Fotograflar", "href": "#" }]
   },
   {
     "label": "Referanslarımız",
-    "href": "/referanslar"
+    "href": "/referanslar",
+    "iconName": "Reference"
   },
   {
     "label": "Blog",
-    "href": "/blog"
+    "href": "/blog",
+    "iconName": "Blog"
   },
   {
     "label": "E-Katalog",
-    "href": "/e-katalog"
+    "href": "/e-katalog",
+    "iconName": "Certificate"
   },
   {
     "label": "İletişim",
-    "href": "/iletisim"
+    "href": "/iletisim",
+    "iconName": "Phone"
   }
 ]

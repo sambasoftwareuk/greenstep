@@ -13,10 +13,19 @@ import { Header3 } from "./_atoms/Headers.jsx";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
-      <ProductBanner bannerProducts={bannerProducts}/>
+      <SliderComponent
+        size={"lg"}
+        sliderData={sliderData}
+        orientation={"split-horizontal"}
+      />
+      <ProductBanner bannerProducts={bannerProducts} />
       <MainProductComponent products={products} />
-      <CarouselSlider data={services} title="Hizmetlerimiz" isAutoSlide={true} isInfinite={true}  />
+      <CarouselSlider
+        data={services}
+        title="Hizmetlerimiz"
+        isAutoSlide={true}
+        isInfinite={true}
+      />
       <div className="w-full flex flex-col items-center mt-8">
         <Header3 className="!text-black m-8">Blog</Header3>
         <div className="flex flex-wrap gap-6 justify-center">
