@@ -12,9 +12,14 @@ const ProductCardWithImage = ({
   imagePosition = "left",
   titleFontSize = "text-xl md:text-2xl",
   titleColor = "text-blue-600",
+  showBottomLine = false,
 }) => {
   const Title = (
-    <h2 className={`${titleFontSize} font-bold ${titleColor} mb-4 mt-8`}>
+    <h2
+      className={`${titleFontSize} font-bold ${titleColor} mb-4 mt-8   ${
+        showBottomLine ? "border-t border-gray-300 w-full pt-3" : ""
+      }`}
+    >
       {title}
     </h2>
   );
@@ -70,7 +75,9 @@ const ProductCardWithImage = ({
 
   return (
     <div
-      className={"group bg-white w-full flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]"}
+      className={
+        "group bg-white w-full flex flex-col rounded-lg shadow p-6 text-center justify-center my-6 transition-transform duration-300 hover:shadow-lg hover:scale-[1.02]"
+      }
     >
       {content.map((element, index) => (
         <React.Fragment key={index}>{element}</React.Fragment>
