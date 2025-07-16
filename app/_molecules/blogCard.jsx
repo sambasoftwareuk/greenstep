@@ -13,7 +13,7 @@ const BlogCard = ({
 }) => {
   return (
     <SambaLinks
-      href={"/"}
+      href={"/blog"}
       className="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 cursor-pointer w-1/5"
     >
       <CardImage
