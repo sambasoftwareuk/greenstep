@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { SambaLinks } from "../_atoms/SambaLinks";
 import { usePathname } from "next/navigation";
