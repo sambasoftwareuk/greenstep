@@ -408,7 +408,7 @@ export const Blog = ({ style, className = "" }) => (
   </svg>
 );
 
-export const WhatsappIcon = ({ style, className = "" }) => (
+export const WhatsAppIcon = ({ style, className = "" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height="24px"
