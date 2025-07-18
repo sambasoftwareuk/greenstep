@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { UpArrowIcon } from "../_atoms/Icons";
-import Icon from "../_atoms/Icon";
-import {
-  CourseTagButton,
-  DirectionButton,
-  IconOnlyButton,
-  OutlinedButton,
-  PrimaryButton,
-  OutlinedButtonWithIcon,
-} from "../_atoms/buttons";
+import { OutlinedButtonWithIcon } from "../_atoms/buttons";
 
 export default function ScrollToTopButton() {
   const [visible, setVisible] = useState(false);
