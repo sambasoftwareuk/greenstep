@@ -1,12 +1,99 @@
 [
-  { "id": 1, "title": "Rashing Halkası", "image": "/tek-hucreli.png" },
-  { "id": 2, "title": "Fan Sistemleri", "image": "/tek-hucreli.png" },
-  { "id": 3, "title": "Bigudi", "image": "/tek-hucreli.png" },
-  { "id": 4, "title": "PVC Film Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 5, "title": "Splash Grid Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 6, "title": "Trickle Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 7, "title": "Damla Tutucu", "image": "/tek-hucreli.png" },
-  { "id": 8, "title": "Serpantin", "image": "/tek-hucreli.png" },
-  { "id": 9, "title": "Vibrasyon Şalteri", "image": "/tek-hucreli.png" },
-  { "id": 10, "title": "Kademeli Nozul", "image": "/tek-hucreli.png" }
+  {
+    "id": 1,
+    "title": "Monoblok Antibakteriyel Kuleler",
+    "slug": "monoblok-antibakteriyel-kuleler",
+    "image": "/tek-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler",
+        "image": "/tek-hucreli.png"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Düz Güverteli Paket Kuleler",
+    "slug": "duz-guverteli-paket-kuleler",
+    "image": "/iki-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Kapalı Devre Kuleler",
+    "slug": "kapali-devre-kuleler",
+    "image": "/uc-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "İnşai Tip Kuleler",
+    "slug": "insai-tip-kuleler",
+    "image": "/tek-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Soğutma Kulesi Yedek Parçaları",
+    "slug": "sogutma-kulesi-yedek-parcalari",
+    "image": "/tek-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Soğutma Kulesi Bakım Onarım İşleri",
+    "slug": "sogutma-kulesi-bakim-onarim-isleri",
+    "image": "/iki-hucreli.png",
+    "options": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      }
+    ]
+  }
 ]
