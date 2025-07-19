@@ -6,7 +6,7 @@ const MainProductComponent = ({ bannerProducts}) => {
     <div className="w-full max-w-7xl mx-auto mt-6 p-4">
       <Header1 className="text-center">Ürünlerimiz</Header1>
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 items-center">
-        {bannerProducts.map((product) => (
+        {bannerProducts?.map((product) => (
           <ProductCardWithImage
             key={product.id}
             title={product.title}

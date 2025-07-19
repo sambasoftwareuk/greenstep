@@ -107,7 +107,7 @@ const page = () => {
         </SambaSlider>
       </div>
       <LearnCard />
-      <MainProductComponent products={products} />
+      <MainProductComponent bannerProducts={bannerProducts} />
       <div className="flex flex-col justify-center items-center m-4">
         <h1 className="font-bold text-lg mb-10">BLOG</h1>
         <div className="mt-2 flex w-4/5 m-auto justify-center gap-6 h-1/4 flex-wrap">
