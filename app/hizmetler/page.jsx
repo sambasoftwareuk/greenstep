@@ -1,4 +1,3 @@
-'use client'
 import services from "../mocks/services.json";
 import ProductCardWithImage from "../_molecules/productCardWithImage";
 import { Header1 } from "../_atoms/Headers";
