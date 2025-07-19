@@ -13,7 +13,7 @@ import { TestimonialCard } from "../_molecules/testimonialCard";
 import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
-import products from "../constants/bigCardProducts.json";
+import bannerProducts from "../constants/bannerProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../constants/blogData.json";
@@ -107,7 +107,7 @@ const page = () => {
         </SambaSlider>
       </div>
       <LearnCard />
-      <MainProductComponent products={products} />
+      <MainProductComponent bannerProducts={bannerProducts} />
       <div className="flex flex-col justify-center items-center m-4">
         <h1 className="font-bold text-lg mb-10">BLOG</h1>
         <div className="mt-2 flex w-4/5 m-auto justify-center gap-6 h-1/4 flex-wrap">
