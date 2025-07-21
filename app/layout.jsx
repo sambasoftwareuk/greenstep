@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
       >
         <AnnouncementBand />
         <Navbar />
-        <main>{children}</main>
+        <main id="top">{children}</main>
         <Footer />
         <div className="fixed bottom-6 right-6 md:bottom-16 flex items-center gap-4 z-50">
           <WhatsAppStickyButton />

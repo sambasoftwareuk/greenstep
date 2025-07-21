@@ -139,6 +139,19 @@ export const LineRightArrow = ({ style, className = "" }) => (
     <path d="M4 12h12l-4-4 1.41-1.41L20.83 12l-7.42 7.41L12 18l4-4H4z" />
   </svg>
 );
+export const LineUpArrow = ({ style, className = "", size = 24 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height={size}
+    viewBox="0 0 24 24"
+    width={size}
+    fill="currentColor"
+    style={style}
+    className={className}
+  >
+    <path d="M12 4l-7.41 7.41L6 12l4-4v12h2V8l4 4 1.41-1.41z" />
+  </svg>
+);
 
 export const ChevronRight = ({ style, className = "" }) => (
   <svg
@@ -179,20 +192,6 @@ export const LineXIcon = ({ style, className = "" }) => (
     className={className}
   >
     <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7a1 1 0 0 0-1.41 1.41L10.59 12l-4.89 4.88a1 1 0 0 0 1.41 1.41L12 13.41l4.88 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.88a1 1 0 0 0 0-1.41z" />
-  </svg>
-);
-
-export const UpArrowIcon = ({ style, className = "", size = 24 }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height={size}
-    viewBox="0 0 24 24"
-    width={size}
-    fill="currentColor"
-    style={style}
-    className={className}
-  >
-    <path d="M7 14l5-5 5 5H7z" />
   </svg>
 );
 

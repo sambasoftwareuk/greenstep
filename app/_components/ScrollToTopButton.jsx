@@ -1,38 +1,49 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { UpArrowIcon } from "../_atoms/Icons";
+import { useState, useEffect, useRef, useCallback } from "react";
+import Link from "next/link";
+import { LineUpArrow } from "../_atoms/Icons";
 import { OutlinedButtonWithIcon } from "../_atoms/buttons";
 
 export default function ScrollToTopButton() {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
-  useEffect(() => {
-    const threshold = 100;
+  const showThreshold = 200;
+  const bottomThreshold = 100;
 
-    const onScroll = () => {
-      const nearBottom =
-        window.innerHeight + window.scrollY >=
-        document.body.offsetHeight - threshold;
-      setVisible(nearBottom);
-    };
+  const handleScroll = useCallback(() => {
+    const scrollY = window.scrollY;
+    const scrollingUp = scrollY < lastScrollY.current;
+    const scrollEnough = scrollY > showThreshold;
 
-    window.addEventListener("scroll", onScroll);
-    onScroll();
+    const nearBottom =
+      window.innerHeight + scrollY >=
+      document.body.offsetHeight - bottomThreshold;
 
-    return () => window.removeEventListener("scroll", onScroll);
+    setVisible(nearBottom || (scrollingUp && scrollEnough));
+    lastScrollY.current = scrollY;
   }, []);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Run once on mount to check initial position
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
 
-  return visible ? (
-    <OutlinedButtonWithIcon
-      icon={
-        <UpArrowIcon
-          className="text-white translate-y-[2px] md:translate-y-0"
-          size={40}
-        />
-      }
-    />
-  ) : null;
+  if (!visible) return null;
+
+  return (
+    <Link href="#top" scroll={true} aria-label="Scroll to top">
+      <OutlinedButtonWithIcon
+        className="bg-white hover:shadow-lg transition-shadow duration-200"
+        icon={
+          <LineUpArrow
+            className="text-blue-500 translate-y[2px] md:translate-y-0"
+            size={34}
+          />
+        }
+      />
+    </Link>
+  );
 }
