@@ -20,7 +20,6 @@ import {
   socialIcons,
 } from "../_atoms/Icons";
 import { AccordionSection } from "../_molecules/accordionSection";
-import links from "../constants/hamburgerLinks.json";
 import { LogoImage } from "../_atoms/images";
 import Logo from "../constants/logo.json";
 
