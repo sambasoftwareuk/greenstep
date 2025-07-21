@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Icon from "../_atoms/Icon";
 import { IconOnlyButton } from "../_atoms/buttons";
-import navLinks1 from "../constants/navLinks";
+import navLinks from "../constants/navLinks";
 import {
   Cart,
   Search,
@@ -20,7 +20,6 @@ import {
   socialIcons,
 } from "../_atoms/Icons";
 import { AccordionSection } from "../_molecules/accordionSection";
-import links from "../constants/hamburgerLinks.json";
 import { LogoImage } from "../_atoms/images";
 import Logo from "../constants/logo.json";
 
@@ -72,7 +71,7 @@ const HamburgerMenu = () => {
             </div>
             <div className="flex flex-col space-y-2 mt-10 ">
               <div className="border-b border-gray-200 pb-2 mb-2">
-                {navLinks1.map((item, index) => {
+                {navLinks.map((item, index) => {
                   const IconComponent = item.iconName
                     ? iconMap[item.iconName]
                     : null;
