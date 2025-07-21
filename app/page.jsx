@@ -7,6 +7,7 @@ import bannerProducts from "./constants/bannerProducts.json";
 import CarouselSlider from "./_components/CarouselSlider.jsx";
 import blogData from "./constants/blogData.json";
 import BlogCardList from "./_components/blogCardList.jsx";
+import SparePartsCarousel from "./_components/SparePartsCarousel.jsx";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
       <ProductBanner bannerProducts={bannerProducts}/>
       <MainProductComponent bannerProducts={bannerProducts} />
+      <SparePartsCarousel />
       <CarouselSlider
         data={services}
         title="Hizmetlerimiz"

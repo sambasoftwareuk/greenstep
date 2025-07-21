@@ -1,11 +1,10 @@
-// app/_components/BlogCardList.jsx
-import { Header3 } from "../_atoms/Headers";
+import { Header1} from "../_atoms/Headers";
 import BlogCard from "../_molecules/blogCard";
 
 const BlogCardList = ({ blogData }) => (
     <div className="w-full flex flex-col items-center mt-8">
-    <Header3 className="!text-black m-8">Blog</Header3>
-    <div className="flex flex-wrap gap-6 justify-center mb-4">
+    <Header1 className="m-8">Blog</Header1>
+    <div className="flex md:gap-6 lg:justify-center justify-around mb-4">
       {blogData.map((post, index) => (
         <BlogCard
           key={index}
