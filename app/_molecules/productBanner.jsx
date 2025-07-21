@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProductBanner = ({ bannerProducts }) => {
   return (
     <div className="bg-primary900 py-4 px-4 w-full flex justify-center">
-      <div className="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="w-full max-w-7xl grid grid-cols-2 md:grid-cols-4 gap-4">
         {bannerProducts.map((product) => (
           <Link
             key={product.id}
