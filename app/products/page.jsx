@@ -1,5 +1,5 @@
 import React from "react";
-import products from "../constants/bigCardProducts.json";
+import products from "../mocks/bigCardProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import { Header1 } from "../_atoms/Headers";
 import Breadcrumb from "../_molecules/breadCrumb";
