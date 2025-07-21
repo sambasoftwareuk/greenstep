@@ -96,7 +96,7 @@ const HamburgerMenu = () => {
                         hoverBg="hover:bg-primary50 active:bg-primary50"
                         showArrowOnlyIfDropdown={true}
                       />
-                      {index !== navLinks1.length - 1 && (
+                      {index !== navLinks.length - 1 && (
                         <hr className="border-b-1 border-gray-200 my-3" />
                       )}
                     </React.Fragment>
