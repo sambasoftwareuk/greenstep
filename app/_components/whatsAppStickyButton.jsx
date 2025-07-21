@@ -9,7 +9,7 @@ const WhatsAppStickyButton = () => {
     <Link
       href={contact.whatsappUrl}
       target="_blank"
-      className="fixed bottom-6 right-4 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-3 rounded-xl md:rounded-full shadow-lg z-50 transition-all"
+      className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-3 py-3 rounded-xl md:rounded-full shadow-lg transition-all"
     >
       <Icon variant={WhatsAppIcon} size={36} color="text-white" />
       <span className="hidden md:flex font-semibold text-lg">
