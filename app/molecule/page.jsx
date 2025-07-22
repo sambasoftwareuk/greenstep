@@ -13,13 +13,11 @@ import { TestimonialCard } from "../_molecules/testimonialCard";
 import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
-import bannerProducts from "../constants/bannerProducts.json";
+import bannerProducts from "../mocks/bannerProducts.json";
 import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
-import blogData from "../constants/blogData.json";
+import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
-import { Home } from "../_atoms/Icons";
-import Icon from "../_atoms/Icon";
 
 const page = () => {
 
