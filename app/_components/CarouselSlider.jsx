@@ -1,12 +1,13 @@
 import React from "react";
 import { SambaSlider } from "../_molecules/slider";
 import ProductCardWithImage from "../_molecules/productCardWithImage";
+import { Header1 } from "../_atoms/Headers";
 
 const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinite }) => {
   return (
     <div className="mt-2 ">
       {title && (
-        <h2 className="text-xl font-semibold mb-4 text-center">{title}</h2>
+        <Header1 className="text-center">{title}</Header1>
       )}
 
       <SambaSlider
