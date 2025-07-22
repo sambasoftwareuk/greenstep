@@ -1,5 +1,5 @@
 import CarouselSlider from "./CarouselSlider.jsx";
-import products from "../constants/bigCardProducts.json";
+import products from "../mocks/spareParts.json";
 import { Header1 } from "../_atoms/Headers";
 
 const SparePartsCarousel = () => {

@@ -15,8 +15,8 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
       <ProductBanner bannerProducts={bannerProducts}/>
-      <SparePartsCarousel />
       <MainProductComponent bannerProducts={mainProducts} />
+      <SparePartsCarousel />
       <CarouselSlider
         data={services}
         title="Hizmetlerimiz"
