@@ -1,12 +1,12 @@
 [
-  { "id": 1, "title": "Rashing Halkası", "image": "/tek-hucreli.png" },
-  { "id": 2, "title": "Fan Sistemleri", "image": "/tek-hucreli.png" },
-  { "id": 3, "title": "Bigudi", "image": "/tek-hucreli.png" },
-  { "id": 4, "title": "PVC Film Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 5, "title": "Splash Grid Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 6, "title": "Trickle Dolgu", "image": "/tek-hucreli.png" },
-  { "id": 7, "title": "Damla Tutucu", "image": "/tek-hucreli.png" },
-  { "id": 8, "title": "Serpantin", "image": "/tek-hucreli.png" },
-  { "id": 9, "title": "Vibrasyon Şalteri", "image": "/tek-hucreli.png" },
-  { "id": 10, "title": "Kademeli Nozul", "image": "/tek-hucreli.png" }
+  { "id": 1, "title": "Rashing Halkası", "image": "/rashing-halkasi.png" },
+  { "id": 2, "title": "Fan Sistemleri", "image": "/fan-sistemleri.png" },
+  { "id": 3, "title": "Bigudi", "image": "/bigudi.webp" },
+  { "id": 4, "title": "PVC Film Dolgu", "image": "/pvc-film-dolgu.png" },
+  { "id": 5, "title": "Splash Grid Dolgu", "image": "/splash-dolgu.png" },
+  { "id": 6, "title": "Trickle Dolgu", "image": "/trickle-dolgu.png" },
+  { "id": 7, "title": "Damla Tutucu", "image": "/danla-tutucu.png" },
+  { "id": 8, "title": "Serpantin", "image": "/serpantin.png" },
+  { "id": 9, "title": "Vibrasyon Şalteri", "image": "/vibrasyon-salteri.png" },
+  { "id": 10, "title": "Kademeli Nozul", "image": "/kademeli-nozul.webp" }
 ]
