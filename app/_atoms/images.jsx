@@ -88,7 +88,7 @@ export const LogoImage = ({
         src={src}
         alt={`slider-image-${imageAlt ? imageAlt : randomImageAlt}`}
         fill
-        className={`object-contain ${
+        className={`object-cover ${
           src === "/generic-image.png" ? "bg-gray-300" : ""
         }`}
       />
