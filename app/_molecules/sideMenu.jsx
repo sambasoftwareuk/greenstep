@@ -51,7 +51,7 @@ export const MobileSideMenu = ({ menu, activeHref }) => {
   return (
     <aside className="w-full bg-white border rounded p-0 md:hidden">
       {menu.map((section, idx) => (
-        <div key={idx} className="border-b">
+        <div key={idx} className="border-b relative">
           <button
             className={`w-full flex items-center justify-between px-4 py-3 text-left font-bold ${
               openIndex === idx ? "bg-primary900 text-white" : "bg-white text-primary"
@@ -62,7 +62,7 @@ export const MobileSideMenu = ({ menu, activeHref }) => {
             <span className="ml-2">{openIndex === idx ? "▲" : "▼"}</span>
           </button>
           {openIndex === idx && section.items && (
-            <ul className="space-y-0 bg-white">
+            <ul className="space-y-0 bg-white absolute z-10 w-full shadow-md">
               {section.items.map((item, i) => (
                 <li key={i}>
                   <SambaLinks
