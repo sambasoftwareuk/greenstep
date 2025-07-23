@@ -5,7 +5,6 @@ import { Footer } from "./_components/footer";
 import AnnouncementBand from "./_components/announcementBand";
 import WhatsAppStickyButton from "./_components/whatsAppStickyButton";
 import ScrollToTopButton from "./_components/ScrollToTopButton";
-import FooterBlogList from "./_components/FooterBlogList";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +37,6 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main id="top">{children}</main>
         <Footer />
-        <FooterBlogList />
         <div className="fixed bottom-6 right-6 md:bottom-16 flex items-center gap-4 z-50">
           <WhatsAppStickyButton />
           <ScrollToTopButton />
