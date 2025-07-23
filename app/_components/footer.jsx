@@ -81,7 +81,7 @@ export function Footer() {
             </span>
           </div>
           <div className="flex items-center gap-1">
-            <Icon variant={Globe} size={12} color="" />
+            <Icon variant={Globe} size={12} />
             <span>English</span>
           </div>
         </div>
