@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { socialIcons } from "../_atoms/Icons";
+import CompanyAddress from "./CompanyAddress";
 
 const AnnouncementBand = () => {
   return (
@@ -34,24 +35,7 @@ const AnnouncementBand = () => {
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center text-white text-xs md:text-sm lg:text-base text-center">
-        <Link
-          href="https://maps.google.com/?q=Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline cursor-pointer mr-4"
-        >
-          Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL
-        </Link>
-
-        <Link href="tel:+902163046868" className="hover:underline mr-4">
-          +90 216 304 68 68
-        </Link>
-
-        <Link href="mailto:info@ctpmuhendislik.com" className="hover:underline">
-          info@ctpmuhendislik.com
-        </Link>
-      </div>
+      <CompanyAddress className="flex flex-wrap items-center justify-center text-white text-xs md:text-sm lg:text-base text-center gap-4" />
     </div>
   );
 };
