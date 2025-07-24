@@ -18,9 +18,10 @@ import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
+import { MobileSideMenu, SideMenu } from "../_molecules/sideMenu";
+import sideMenuData from "../mocks/sideMenuData.json";
 
 const page = () => {
-
   return (
     <div className="p-4">
       <Breadcrumb />
@@ -51,7 +52,6 @@ const page = () => {
           linkHref="#"
         />
       </div>
-
       <div className="mt-5">
         <TabMenu tabs={tabs} />
 
@@ -122,6 +122,8 @@ const page = () => {
           ))}
         </div>
       </div>
+      <SideMenu menu={sideMenuData} activeHref={""} />
+      <MobileSideMenu menu={sideMenuData} activeHref={""} />
     </div>
   );
 };

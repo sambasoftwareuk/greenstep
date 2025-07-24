@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Ürünlerimiz",
+    "href": "/urunler",
+    "items": [
+      {
+        "label": "Monoblok Antibakteriyel Kuleler",
+        "href": "/urunler/monoblok-antibakteriyel-kuleler"
+      },
+      {
+        "label": "Düz Güverteli Paket Kuleler",
+        "href": "/urunler/duz-guverteli-paket-kuleler"
+      },
+      {
+        "label": "Kapalı Devre Kuleler",
+        "href": "/urunler/kapali-devre-kuleler"
+      },
+      { "label": "İnşai Tip Kuleler", "href": "/urunler/insai-tip-kuleler" },
+      {
+        "label": "Soğutma Kulesi Yedek Parçaları",
+        "href": "/urunler/yedek-parcalar"
+      },
+      {
+        "label": "Soğutma Kulesi Bakım Onarım İşleri",
+        "href": "/urunler/bakim-onarim"
+      }
+    ]
+  },
+  {
+    "title": "Yedek Parçalar",
+    "href": "/yedek-parcalar",
+    "items": [
+      { "label": "Rashing Halkası", "href": "/yedek-parcalar/rashing-halkasi" },
+      { "label": "Fan Sistemleri", "href": "/yedek-parcalar/fan-sistemleri" },
+      { "label": "Bigudi", "href": "/yedek-parcalar/bigudi" },
+      { "label": "PVC Film Dolgu", "href": "/yedek-parcalar/pvc-film-dolgu" },
+      {
+        "label": "Splash Grid Dolgu",
+        "href": "/yedek-parcalar/splash-grid-dolgu"
+      },
+      { "label": "Trickle Dolgu", "href": "/yedek-parcalar/trickle-dolgu" },
+      { "label": "Damla Tutucu", "href": "/yedek-parcalar/damla-tutucu" },
+      { "label": "Serpantin", "href": "/yedek-parcalar/serpantin" },
+      {
+        "label": "Vibrasyon Şalteri",
+        "href": "/yedek-parcalar/vibrasyon-salteri"
+      },
+      { "label": "Kademeli Nozul", "href": "/yedek-parcalar/kademeli-nozul" }
+    ]
+  },
+  {
+    "title": "Hizmetlerimiz",
+    "href": "/hizmetler",
+
+    "items": [
+      { "label": "Otomasyon Hizmeti", "href": "/hizmetler/otomasyon" },
+      { "label": "Tasarım Hizmeti", "href": "/hizmetler/tasarim" },
+      { "label": "Bakım Onarım Hizmeti", "href": "/hizmetler/bakim-onarim" },
+      {
+        "label": "Montaj-Demontaj Hizmeti",
+        "href": "/hizmetler/montaj-demontaj"
+      },
+      { "label": "Enerji Analiz Hizmeti", "href": "/hizmetler/enerji-analiz" }
+    ]
+  }
+]
