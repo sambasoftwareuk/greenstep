@@ -87,3 +87,52 @@ const ProductCardWithImage = ({
 };
 
 export default ProductCardWithImage;
+
+export const OverlayImageCard = ({
+  title,
+  imageLink,
+  titlePosition = "bottom-left",
+  titleFontSize = "text-xl md:text-2xl",
+  button = false,
+  buttonLabel = "İNCELE",
+}) => {
+  const titlePositionMap = {
+    "top-left": "top-4 left-4",
+    "top-center": "top-4 left-1/2 transform -translate-x-1/2",
+    "top-right": "top-4 right-4",
+    center: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
+    "bottom-left": "bottom-4 left-4",
+    "bottom-center": "bottom-4 left-1/2 transform -translate-x-1/2",
+    "bottom-right": "bottom-4 right-4",
+  };
+
+  return (
+    <div
+      className="relative w-1/4 h-72 md:h-80 rounded-lg overflow-hidden group shadow-md transition-opacity duration-300"
+      style={{
+        backgroundImage: `url(${imageLink})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay karartma */}
+      <div className="absolute inset-0 bg-black opacity-40 transition-opacity duration-300 ease-in-out group-hover:opacity-20"></div>
+
+      {/* Başlık */}
+      <div
+        className={`absolute z-10 px-4 py-2 text-white font-bold ${titleFontSize} ${
+          titlePositionMap[titlePosition] || "bottom-center"
+        }`}
+      >
+        {title}
+      </div>
+
+      {/* Opsiyonel buton */}
+      {button && (
+        <div className="absolute z-10 bottom-4 right-4">
+          <PrimaryButton label={buttonLabel} className="rounded-full" />
+        </div>
+      )}
+    </div>
+  );
+};
