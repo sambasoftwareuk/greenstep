@@ -19,6 +19,8 @@ import BlogCard from "../_molecules/blogCard";
 import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
 import { OverlayImageCard } from "../_molecules/productCardWithImage";
+import { MobileSideMenu, SideMenu } from "../_molecules/sideMenu";
+import sideMenuData from "../mocks/sideMenuData.json";
 
 const page = () => {
   return (
@@ -51,7 +53,6 @@ const page = () => {
           linkHref="#"
         />
       </div>
-
       <div className="mt-5">
         <TabMenu tabs={tabs} />
 
@@ -127,6 +128,8 @@ const page = () => {
         imageLink="/5.jpg"
         overlayDarkness={0.5}
       />
+      <SideMenu menu={sideMenuData} activeHref={""} />
+      <MobileSideMenu menu={sideMenuData} activeHref={""} />
     </div>
   );
 };
