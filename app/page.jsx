@@ -4,18 +4,25 @@ import sliderData from "./mocks/sliderData.json";
 import ProductBanner from "./_molecules/productBanner";
 import SliderComponent from "./_components/sliderComponent.jsx";
 import bannerProducts from "./mocks/bannerProducts.json";
-import mainProducts from "./mocks/mainProducts.json";
+import mainProducts from "./constants/bigCardProducts.json";
 import CarouselSlider from "./_components/CarouselSlider.jsx";
 import blogData from "./mocks/blogData.json";
 import BlogCardList from "./_components/blogCardList.jsx";
-import products from "./mocks/spareParts.json"
+import products from "./mocks/spareParts.json";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-      <SliderComponent size={"lg"} sliderData={sliderData} orientation={"split-horizontal"} />
-      <ProductBanner bannerProducts={bannerProducts}/>
-      <MainProductComponent bannerProducts={mainProducts} />
+      <SliderComponent
+        size={"lg"}
+        sliderData={sliderData}
+        orientation={"split-horizontal"}
+      />
+      <ProductBanner bannerProducts={bannerProducts} />
+      <MainProductComponent
+        bannerProducts={mainProducts}
+        title="Ürünlerimiz "
+      />
       <CarouselSlider
         data={products}
         title="Yedek Parçalar"
@@ -28,7 +35,7 @@ export default function Home() {
         isAutoSlide={true}
         isInfinite={true}
       />
-     <BlogCardList blogData={blogData} />
+      <BlogCardList blogData={blogData} />
     </div>
   );
 }
