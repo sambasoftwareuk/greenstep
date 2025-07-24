@@ -18,9 +18,9 @@ import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
+import { OverlayImageCard } from "../_molecules/productCardWithImage";
 
 const page = () => {
-
   return (
     <div className="p-4">
       <Breadcrumb />
@@ -122,6 +122,11 @@ const page = () => {
           ))}
         </div>
       </div>
+      <OverlayImageCard
+        title="Tüm Su Soğutma Kulesi Markaları İçin Bakım"
+        imageLink="/5.jpg"
+        overlayDarkness={0.5}
+      />
     </div>
   );
 };
