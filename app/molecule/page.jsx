@@ -18,6 +18,7 @@ import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
+import { OverlayImageCard } from "../_molecules/productCardWithImage";
 import { MobileSideMenu, SideMenu } from "../_molecules/sideMenu";
 import sideMenuData from "../mocks/sideMenuData.json";
 
@@ -122,6 +123,11 @@ const page = () => {
           ))}
         </div>
       </div>
+      <OverlayImageCard
+        title="Tüm Su Soğutma Kulesi Markaları İçin Bakım"
+        imageLink="/5.jpg"
+        overlayDarkness={0.5}
+      />
       <SideMenu menu={sideMenuData} activeHref={""} />
       <MobileSideMenu menu={sideMenuData} activeHref={""} />
     </div>
