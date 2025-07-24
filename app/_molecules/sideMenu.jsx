@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SambaLinks } from "../_atoms/SambaLinks";
 
 export const SideMenu = ({ menu, activeHref }) => (
-  <aside className="w-64 bg-white border rounded p-0 hidden md:block">
+  <aside className="w-64 bg-white  p-0 hidden md:block">
     {menu.map((section, idx) => (
       <div key={idx} className="mb-0">
         <div
@@ -21,7 +21,7 @@ export const SideMenu = ({ menu, activeHref }) => (
           )}
         </div>
         {section.items && (
-          <ul className="space-y-0">
+          <ul className="space-y-0 border rounded mb-6">
             {section.items.map((item, i) => (
               <li key={i}>
                 <SambaLinks
