@@ -6,6 +6,7 @@ import { Header1 } from "@/app/_atoms/Headers";
 import MainProductComponent from "@/app/_components/MainProductComponent.jsx";
 import { MobileSideMenu, SideMenu } from "@/app/_molecules/sideMenu";
 import sideMenuData from "../../mocks/sideMenuData.json";
+import Breadcrumb from "../../_molecules/breadCrumb";
 
 export default async function ProductDetailPage({ params }) {
   const { slug } = useParams();
@@ -18,6 +19,9 @@ export default async function ProductDetailPage({ params }) {
 
   return (
     <div className="max-w-7xl mx-auto p-6">
+      <div className="text-center">
+        <Breadcrumb />
+      </div>
       <Header1 className="text-center my-5">{product.title}</Header1>
 
       <div className="flex flex-col lg:flex-row justify-between gap-8 ">
