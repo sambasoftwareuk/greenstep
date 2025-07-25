@@ -3,9 +3,10 @@ import ProductCardWithImage from "../_molecules/productCardWithImage";
 import { Header1 } from "../_atoms/Headers";
 import Link from "next/link";
 
-const MainProductComponent = ({
-  bannerProducts,
+const MainItemGrid = ({
+  items,
   title,
+  baseHref = "", // default ""
   gridClassName = "grid-cols-1 md:grid-cols-2",
   cardProps = {},
 }) => {
@@ -13,14 +14,14 @@ const MainProductComponent = ({
     <div className="w-full max-w-7xl mx-auto mt-6 p-4">
       {title && <Header1 className="text-center">{title}</Header1>}
       <div className={`grid ${gridClassName} gap-8 items-center`}>
-        {bannerProducts?.map((product) => (
-          <Link key={product.slug} href={`/products/${product.slug}`}>
+        {items?.map((item) => (
+          <Link key={item.slug} href={`/${baseHref}/${item.slug}`}>
             <ProductCardWithImage
-              key={product.id}
-              title={product.title}
-              imageLink={product.image}
-              variant={1}
+              key={item.id}
+              title={item.title}
+              imageLink={item.image}
               buttonLabel="DETAYLAR"
+              variant={1}
               aspectRatio="aspect-[16/16]"
               {...cardProps}
             />
@@ -30,4 +31,5 @@ const MainProductComponent = ({
     </div>
   );
 };
-export default MainProductComponent;
+
+export default MainItemGrid;

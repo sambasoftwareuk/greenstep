@@ -1,4 +1,3 @@
-import MainProductComponent from "./_components/MainProductComponent.jsx";
 import services from "./mocks/services.json";
 import sliderData from "./mocks/sliderData.json";
 import ProductBanner from "./_molecules/productBanner";
@@ -9,6 +8,7 @@ import CarouselSlider from "./_components/CarouselSlider.jsx";
 import blogData from "./mocks/blogData.json";
 import BlogCardList from "./_components/blogCardList.jsx";
 import products from "./mocks/spareParts.json";
+import MainItemGrid from "./_components/MainItemGrid.jsx";
 
 export default function Home() {
   return (
@@ -19,9 +19,11 @@ export default function Home() {
         orientation={"split-horizontal"}
       />
       <ProductBanner bannerProducts={bannerProducts} />
-      <MainProductComponent
-        bannerProducts={mainProducts}
-        title="Ürünlerimiz "
+
+      <MainItemGrid
+        items={mainProducts}
+        title="Ürünlerimiz"
+        baseHref="products"
       />
       <CarouselSlider
         data={products}

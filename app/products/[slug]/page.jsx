@@ -1,12 +1,12 @@
 "use client";
 import { useParams } from "next/navigation";
-import products from "../../constants/bigCardProducts.json"; // adjust path if needed
+import products from "../../constants/bigCardProducts.json";
 import Image from "next/image";
 import { Header1 } from "@/app/_atoms/Headers";
-import MainProductComponent from "@/app/_components/MainProductComponent.jsx";
 import { MobileSideMenu, SideMenu } from "@/app/_molecules/sideMenu";
 import sideMenuData from "../../mocks/sideMenuData.json";
 import Breadcrumb from "../../_molecules/breadCrumb";
+import MainItemGrid from "@/app/_components/MainItemGrid";
 
 export default async function ProductDetailPage({ params }) {
   const { slug } = useParams();
@@ -46,8 +46,10 @@ export default async function ProductDetailPage({ params }) {
         </div>
       </div>
       <Header1 className="text-center mt-8">Diğer Ürünler</Header1>
-      <MainProductComponent
-        bannerProducts={products.filter((p) => p.slug !== slug)}
+
+      <MainItemGrid
+        items={products.filter((p) => p.slug !== slug)}
+        baseHref="products"
         gridClassName="grid-cols-1 md:grid-cols-3"
         cardProps={{ button: false, variant: 2 }}
       />
