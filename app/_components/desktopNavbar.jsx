@@ -20,7 +20,9 @@ const DesktopNavbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden xl:flex flex-grow justify-center items-center ">
-          <IconOnlyButton icon={<Icon variant={Home} size={20} />} />
+          <Link href="/">
+            <IconOnlyButton icon={<Icon variant={Home} size={20} />} />
+          </Link>
           {navLinks.map(({ label, href, className, dropdown }) => (
             <div key={label} className="relative group">
               <Link

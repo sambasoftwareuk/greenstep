@@ -1,7 +1,7 @@
 [
   {
     "title": "Ürünlerimiz",
-    "href": "/urunler",
+    "href": "/products",
     "items": [
       {
         "label": "Monoblok Antibakteriyel Kuleler",
@@ -53,14 +53,20 @@
     "href": "/hizmetler",
 
     "items": [
-      { "label": "Otomasyon Hizmeti", "href": "/hizmetler/otomasyon" },
-      { "label": "Tasarım Hizmeti", "href": "/hizmetler/tasarim" },
-      { "label": "Bakım Onarım Hizmeti", "href": "/hizmetler/bakim-onarim" },
+      { "label": "Otomasyon Hizmeti", "href": "/hizmetler/otomasyon-hizmeti" },
+      { "label": "Tasarım Hizmeti", "href": "/hizmetler/tasarim-hizmeti" },
+      {
+        "label": "Bakım Onarım Hizmeti",
+        "href": "/hizmetler/bakim-onarim-hizmeti"
+      },
       {
         "label": "Montaj-Demontaj Hizmeti",
-        "href": "/hizmetler/montaj-demontaj"
+        "href": "/hizmetler/montaj-demontaj-hizmeti"
       },
-      { "label": "Enerji Analiz Hizmeti", "href": "/hizmetler/enerji-analiz" }
+      {
+        "label": "Enerji Analiz Hizmeti",
+        "href": "/hizmetler/enerji-analiz-hizmeti"
+      }
     ]
   }
 ]

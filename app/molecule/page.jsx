@@ -14,13 +14,13 @@ import { LearnCard } from "../_molecules/learnCard";
 import { FAQSection } from "../_molecules/faqSection";
 import courses from "../mocks/courses.json";
 import bannerProducts from "../mocks/bannerProducts.json";
-import MainProductComponent from "../_components/MainProductComponent.jsx";
 import BlogCard from "../_molecules/blogCard";
 import blogData from "../mocks/blogData.json";
 import Breadcrumb from "../_molecules/breadCrumb";
 import { OverlayImageCard } from "../_molecules/productCardWithImage";
 import { MobileSideMenu, SideMenu } from "../_molecules/sideMenu";
 import sideMenuData from "../mocks/sideMenuData.json";
+import MainItemGrid from "../_components/MainItemGrid";
 
 const page = () => {
   return (
@@ -106,7 +106,8 @@ const page = () => {
         </SambaSlider>
       </div>
       <LearnCard />
-      <MainProductComponent bannerProducts={bannerProducts} />
+      <MainItemGrid items={bannerProducts} baseHref="products" />
+
       <div className="flex flex-col justify-center items-center m-4">
         <h1 className="font-bold text-lg mb-10">BLOG</h1>
         <div className="mt-2 flex w-4/5 m-auto justify-center gap-6 h-1/4 flex-wrap">

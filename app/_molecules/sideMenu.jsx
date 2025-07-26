@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { SambaLinks } from "../_atoms/SambaLinks";
 
@@ -54,7 +56,9 @@ export const MobileSideMenu = ({ menu, activeHref }) => {
         <div key={idx} className="border-b relative">
           <button
             className={`w-full flex items-center justify-between px-4 py-3 text-left font-bold ${
-              openIndex === idx ? "bg-primary900 text-white" : "bg-white text-primary"
+              openIndex === idx
+                ? "bg-primary900 text-white"
+                : "bg-white text-primary"
             }`}
             onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
           >
