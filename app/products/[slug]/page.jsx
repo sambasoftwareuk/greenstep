@@ -1,5 +1,3 @@
-"use client";
-import { useParams } from "next/navigation";
 import products from "../../constants/bigCardProducts.json";
 import Image from "next/image";
 import { Header1 } from "@/app/_atoms/Headers";
@@ -9,9 +7,11 @@ import Breadcrumb from "../../_molecules/breadCrumb";
 import MainItemGrid from "@/app/_components/MainItemGrid";
 
 export default async function ProductDetailPage({ params }) {
-  const { slug } = useParams();
-
+  const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
+  const productMenu = sideMenuData.filter(
+    (section) => section.title === "Ürünlerimiz"
+  );
 
   if (!product) {
     return <div className="p-6 text-red-500">Ürün bulunamadı.</div>;
@@ -25,8 +25,11 @@ export default async function ProductDetailPage({ params }) {
       <Header1 className="text-center my-5">{product.title}</Header1>
 
       <div className="flex flex-col lg:flex-row justify-between gap-8 ">
-        <SideMenu menu={sideMenuData} activeHref={"/products"} />
-        <MobileSideMenu menu={sideMenuData} activeHref={"/products"} />
+        <SideMenu menu={productMenu} activeHref={`/urunler/${product.slug}`} />
+        <MobileSideMenu
+          menu={productMenu}
+          activeHref={`/urunler/${product.slug}`}
+        />
 
         {/* Description Center */}
         <div
