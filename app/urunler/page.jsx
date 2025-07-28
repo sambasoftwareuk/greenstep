@@ -7,7 +7,7 @@ const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-center py-12 px-4">
       <Breadcrumb />
-      <MainItemGrid items={products} title="Ürünlerimiz" baseHref="products" />
+      <MainItemGrid items={products} title="Ürünlerimiz" baseHref="urunler" />
     </div>
   );
 };

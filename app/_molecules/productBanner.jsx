@@ -8,7 +8,7 @@ const ProductBanner = ({ bannerProducts }) => {
         {bannerProducts.map((product) => (
           <Link
             key={product.id}
-            href={`/products/${product.id}`}
+            href={`/urunler/${product.id}`}
             className="cursor-pointer"
           >
             <div className="flex items-center justify-center max-w-64 gap-0 md:w-full md:gap-2">
