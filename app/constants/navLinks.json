@@ -79,9 +79,9 @@
   },
   {
     "label": "Galeri",
-    "href": "/galeri",
+    "href": "/gallery",
     "iconName": "Gallery",
-    "dropdown": [{ "label": "Fotograflar", "href": "#" }]
+    "dropdown": [{ "label": "Fotograflar", "href": "gallery/photos" }]
   },
   {
     "label": "Referanslarımız",
