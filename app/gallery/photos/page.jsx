@@ -1,7 +1,7 @@
 "use client";
 
 import { Header1 } from "@/app/_atoms/Headers";
-import { CardImage } from "@/app/_atoms/images";
+import { CardImage, ZoomableImage } from "@/app/_atoms/images";
 import Modal from "@/app/_molecules/modal";
 import { SambaSlider } from "@/app/_molecules/slider";
 import { useState } from "react";
@@ -45,10 +45,11 @@ const GalleryPage = () => {
             showDots={true}
             showArrows={true}
             size="lg"
+            initialSlide={selectedIndex}
           >
             {images.map((img, i) => (
-              <div key={i} className="w-full h-full">
-                <CardImage imageLink={img} aspectRatio="aspect-[4/3]" />
+              <div key={i} className="w-full h-full flex justify-center items-center">
+                <ZoomableImage imageLink={img} aspectRatio="aspect-[4/3]" />
               </div>
             ))}
           </SambaSlider>

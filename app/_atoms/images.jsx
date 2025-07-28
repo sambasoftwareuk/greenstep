@@ -1,5 +1,6 @@
+'use client'
 import Image from "next/image";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 const getSrc = (imageLink) =>
   imageLink && imageLink.trim() !== "" ? imageLink : "/generic-image.png";
@@ -108,5 +109,27 @@ export const ProfileImage = ({ imageLink = "", imageAlt }) => {
         className="object-contain border-2 border-black rounded-full bg-gray-200"
       />
     </div>
+  );
+};
+
+export const ZoomableImage = ({ imageLink }) => {
+  const [zoomed, setZoomed] = useState(false);
+
+ const toggleZoom = (e) => {
+    e.stopPropagation(); 
+    setZoomed((z) => !z);
+  };
+
+  return (
+  <Image
+  src={imageLink}
+  width={800}
+  height={600}
+  alt="zoomable"
+  onClick={toggleZoom}
+  className={`object-contain transition-transform duration-300 cursor-zoom-in ${
+    zoomed ? "scale-[1.5]" : "scale-100"
+  }`}
+/>
   );
 };

@@ -13,16 +13,21 @@ export const SambaSlider = ({
   showDots = true,
   showArrows = true,
   size = "sm",
+  initialSlide = 0,
 }) => {
   const scrollRef = useRef(null);
   const intervalRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(initialSlide); 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
   const childArray = useMemo(() => React.Children.toArray(children), [children]);
   const totalSlides = Math.ceil(childArray.length / itemsPerSlide);
   const isSingleItem = itemsPerSlide === 1;
+
+    useEffect(() => {
+    setCurrentIndex(initialSlide);
+  }, [initialSlide]);
 
   // Auto slide (slide mode only)
   useEffect(() => {
