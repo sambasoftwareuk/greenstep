@@ -106,7 +106,7 @@ const page = () => {
         </SambaSlider>
       </div>
       <LearnCard />
-      <MainItemGrid items={bannerProducts} baseHref="products" />
+      <MainItemGrid items={bannerProducts} baseHref="urunler" />
 
       <div className="flex flex-col justify-center items-center m-4">
         <h1 className="font-bold text-lg mb-10">BLOG</h1>

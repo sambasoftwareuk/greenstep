@@ -52,7 +52,7 @@ export default async function ProductDetailPage({ params }) {
 
       <MainItemGrid
         items={products.filter((p) => p.slug !== slug)}
-        baseHref="products"
+        baseHref="urunler"
         gridClassName="grid-cols-1 md:grid-cols-3"
         cardProps={{ button: false, variant: 2 }}
       />

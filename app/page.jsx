@@ -21,9 +21,9 @@ export default function Home() {
       <ProductBanner bannerProducts={bannerProducts} />
 
       <MainItemGrid
-        items={mainProducts}
+        items={mainProducts.filter((item) => item.showOnMainPage)}
         title="Ürünlerimiz"
-        baseHref="products"
+        baseHref="urunler"
       />
       <CarouselSlider
         data={products}
