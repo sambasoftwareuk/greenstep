@@ -112,7 +112,7 @@ export const ProfileImage = ({ imageLink = "", imageAlt }) => {
   );
 };
 
-export const ZoomableImage = ({ imageLink }) => {
+export const ZoomableImage = ({ imageLink, alt = "zoomable" }) => {
   const [zoomed, setZoomed] = useState(false);
 
  const toggleZoom = (e) => {
