@@ -5,7 +5,7 @@ import { Header1 } from "../_atoms/Headers";
 
 const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinite }) => {
   return (
-    <div className="mt-2 ">
+    <div className="mt-2 w-[80%] ">
       {title && (
         <Header1 className="text-center">{title}</Header1>
       )}
