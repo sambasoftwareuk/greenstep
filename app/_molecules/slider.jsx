@@ -128,7 +128,6 @@ const prevSlide = () => {
   }
 
   // 👇 SLIDE VARIANT
-  // 👇 SLIDE VARIANT
 const getExtendedSlides = () => {
   if (isInfinite && childArray.length > 0) {
     // Slider kapanmasın diye, itemsPerSlide kadar başa ekleme yapılır
@@ -164,7 +163,7 @@ return (
   {showArrows && (isInfinite || currentIndex > 0) && (
     <DirectionButton
       icon={<Icon variant={ChevronLeft} size={32} />}
-      className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+      className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
       onClick={prevSlide}
     />
   )}
@@ -172,7 +171,7 @@ return (
     (isInfinite || currentIndex < childArray.length - itemsPerSlide) && (
       <DirectionButton
         icon={<Icon variant={ChevronRight} size={32} />}
-        className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+        className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
         onClick={nextSlide}
       />
     )}
