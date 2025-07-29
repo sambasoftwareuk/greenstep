@@ -1,13 +1,15 @@
-import { Header1} from "../_atoms/Headers";
+import { Header1 } from "../_atoms/Headers";
 import BlogCard from "../_molecules/blogCard";
+import blogData from "../mocks/blogData.json";
 
-const BlogCardList = ({ blogData }) => (
-    <div className="w-full flex flex-col items-center mt-8">
+const Blog = () => (
+  <div className="w-full flex flex-col items-center mt-8">
     <Header1 className="m-8">Blog</Header1>
-    <div className="flex md:gap-6 lg:justify-center justify-around mb-4">
+    <div className="flex flex-wrap gap-6 justify-center mb-4">
       {blogData.map((post, index) => (
         <BlogCard
           key={index}
+          slug={post.slug}
           imageLink={post.imageLink}
           imageAlt={post.imageAlt}
           date={post.date}
@@ -20,4 +22,4 @@ const BlogCardList = ({ blogData }) => (
   </div>
 );
 
-export default BlogCardList;
+export default Blog;

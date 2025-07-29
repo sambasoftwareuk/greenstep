@@ -6,9 +6,9 @@ import bannerProducts from "./mocks/bannerProducts.json";
 import mainProducts from "./constants/bigCardProducts.json";
 import CarouselSlider from "./_components/CarouselSlider.jsx";
 import blogData from "./mocks/blogData.json";
-import BlogCardList from "./_components/blogCardList.jsx";
 import products from "./mocks/spareParts.json";
 import MainItemGrid from "./_components/MainItemGrid.jsx";
+import Blog from "./blog/page";
 
 export default function Home() {
   return (
@@ -37,7 +37,7 @@ export default function Home() {
         isAutoSlide={true}
         isInfinite={true}
       />
-      <BlogCardList blogData={blogData} />
+      <Blog blogData={blogData} />
     </div>
   );
 }

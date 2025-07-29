@@ -1,24 +1,27 @@
 [
   {
     "title": "SOĞUTMA KULELERİNDE SUDAKİ KATI MADDE ORANINA GÖRE DOLGU SEÇİMİ NASIL OLMALIDIR",
+    "slug": "sogutma-kulelerinde-sudaki-kati-madde-oranina-gore-dolgu-secimi-nasil-olmalidir",
     "date": "29 Haziran 2025",
-    "excerpt": "Bu yazıda, GreenStep Cooling Towers markasında dolgu seçiminin TSS değerine göre nasıl yapılması gerektiğini ele alıyoruz.",
+    "excerpt": "GreenStep Cooling Towers markasında (ve genel olarak her soğutma kulesinde) dolgu seçimi, suyun kalitesi yani sudaki katı madde oranı (TSS – Total Suspended Solids) ve suyun genel kirlilik durumu dikkate alınarak yapılmalıdır. Bu seçim, hem dolgunun ömrünü hem de soğutma verimini doğrudan etkiler.\n\nAşağıda GreenStep kuleleri için, katı madde oranına göre dolgu tipi seçimi önerilerini bulabilirsin:\n\n1. Düşük Katı Madde İçeriği (TSS < 50 ppm)\n- Yüksek ısı transfer yüzey alanına sahip PVC film dolgular\n- Yüksek soğutma verimi, kompakt kule boyutu\n- HVAC sistemleri, chiller sistemleri için idealdir\n\n2. Orta Katı Madde İçeriği (TSS 50–150 ppm)\n- Splash (darbe tipi), PP bigudi/trickle dolgular\n- Tıkanma riski düşüktür, periyodik temizlikle uzun ömür\n- Endüstriyel proses suyu, tekstil/plastik soğutması gibi uygulamalarda kullanılır\n\n3. Yüksek Katı Madde İçeriği (TSS > 150 ppm)\n- Tamamen splash tipi dolgular önerilir\n- Tıkanmaz, dayanıklıdır, kolay temizlik yapılabilir\n- Çimento, demir-çelik, enerji santrali gibi ağır sanayi sistemleri için uygundur\n\nGreenStep’in PE gövde ve CTP üst yapısı sayesinde dolgu temizliği kolaydır. Ayrıca antimikrobiyel yapı biyolojik kirlenmeyi azaltır.",
     "imageLink": "/tek-hucreli.png",
     "imageAlt": "Dolgu seçimi blog görseli",
     "aspectRatio": "aspect-[16/16]"
   },
   {
     "title": "GREEN STEP SU SOĞUTMA KULELERİ NASIL ÇALIŞIR? AÇIK, KAPALI VE DOĞAL ÇEKİŞLİ KULELER",
+    "slug": "green-step-su-sogutma-kuleleri-nasil-calisir-acik-kapali-ve-dogal-cekisli-kuleler",
     "date": "26 Haziran 2025",
-    "excerpt": "Açık devre, kapalı devre, inşai tip ve doğal çekişli kulelerin farklarını ve çalışma prensiplerini bu yazıda inceleyebilirsin.",
+    "excerpt": "GreenStep su soğutma kuleleri üç ana prensibe göre çalışır: açık devre, kapalı devre ve doğal çekişli sistemler.\n\n1. Açık Devre Soğutma Kuleleri:\n- Su, doğrudan havayla temas ederek ısı kaybeder\n- Buharlaşma ile ısı transferi sağlanır\n- Enerji verimlidir, bakım gerektirir\n\n2. Kapalı Devre Soğutma Kuleleri:\n- Isı taşıyan su kapalı borular içinde dolaşır\n- Dıştan püskürtülen su ile ısı transferi olur\n- Su kaybı azdır, sistem korumalıdır\n\n3. Doğal Çekişli Soğutma Kuleleri:\n- Fan yerine bacadan yükselen sıcak havanın doğal yükselme kuvveti kullanılır\n- Yüksek kule tasarımı ile doğal hava akımı oluşur\n- Enerji tüketimi düşüktür, ancak büyük alan gerektirir\n\nGreenStep, bu 3 sistemi farklı sektör ihtiyaçlarına göre modüler ve çevreci malzeme kullanarak üretmektedir.",
     "imageLink": "/tek-hucreli.png",
     "imageAlt": "Soğutma kuleleri blog görseli",
     "aspectRatio": "aspect-[16/16]"
   },
   {
     "title": "SOĞUTMA KULELERİ NE AMAÇLA KULLANILIR? CHILLER’DAN FARKI NEDİR?",
+    "slug": "sogutma-kuleleri-ne-amacla-kullanilir-chillerdan-farki-nedir",
     "date": "23 Haziran 2025",
-    "excerpt": "Soğutma kuleleri ile chiller sistemleri arasındaki temel farkları ve birlikte nasıl çalıştıklarını detaylıca açıklıyoruz.",
+    "excerpt": "Soğutma kuleleri, endüstriyel veya ticari sistemlerde ısınan suyu soğutarak tekrar kullanılabilir hale getirmek için kullanılır.\n\nSoğutma Kulesi:\n- Suyu hava ile temas ettirerek buharlaştırma yoluyla soğutur\n- Genellikle HVAC sistemleri, üretim tesisleri ve enerji santrallerinde kullanılır\n- Su sirkülasyonu sayesinde sistemin genel enerji verimini artırır\n\nChiller (Soğutucu):\n- Kompresörlü sistemle suyu doğrudan soğutur\n- Kapalı devredir, havayla doğrudan teması yoktur\n- Daha kontrollü ve hassas sıcaklıklar sağlar\n\nFarklar:\n- Soğutma kulesi, suyun ısısını doğrudan dış ortama verirken; chiller bunu gaz devresiyle yapar\n- Chiller sistemleri genelde küçük/orta ölçekli yapılarda, soğutma kuleleri ise büyük sistemlerde kullanılır\n- Genellikle birlikte çalışabilirler: chiller’in yoğuşma tarafındaki ısı, kule ile atılır\n\nSonuç olarak, sistem tasarımı yapılırken bu iki yapının farkı, enerji verimliliği ve uygulama alanları dikkate alınmalıdır.",
     "imageLink": "/tek-hucreli.png",
     "imageAlt": "Soğutma ve chiller blog görseli",
     "aspectRatio": "aspect-[16/16]"
