@@ -121,15 +121,19 @@ export const ZoomableImage = ({ imageLink }) => {
   };
 
   return (
-  <Image
-  src={imageLink}
-  width={800}
-  height={600}
-  alt="zoomable"
-  onClick={toggleZoom}
-  className={`object-contain transition-transform duration-300 cursor-zoom-in ${
-    zoomed ? "scale-[1.5]" : "scale-100"
-  }`}
-/>
+ <Image
+      src={imageLink}
+      width={800}
+      height={600}
+      alt={alt}
+      onClick={toggleZoom}
+      tabIndex={0}
+      onKeyPress={(e) => {
+        if (e.key === "Enter" || e.key === " ") toggleZoom(e);
+      }}
+      className={`object-contain transition-transform duration-300 cursor-zoom-in ${
+        zoomed ? "scale-[1.5]" : "scale-100"
+      }`}
+    />
   );
 };
