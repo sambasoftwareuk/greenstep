@@ -21,8 +21,7 @@ const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinit
 
   return (
     <div className="mt-2 w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto">
-      {console.log("Size:", width)};
-      {title && (
+       {title && (
         <Header1 className="text-center">{title}</Header1>
       )}
 
@@ -46,7 +45,7 @@ const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinit
         ))}
       </SambaSlider>
     </div>
-  );
-};
+  )
+}
 
 export default CarouselSlider;
