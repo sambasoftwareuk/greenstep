@@ -1,6 +1,6 @@
 import React from "react";
 import { CardImage } from "../_atoms/images";
-import { ChevronLeft } from "../_atoms/Icons";
+import { ChevronRight } from "../_atoms/Icons";
 import { SambaLinks } from "../_atoms/SambaLinks";
 
 const BlogCard = ({
@@ -10,12 +10,12 @@ const BlogCard = ({
   title,
   excerpt,
   aspectRatio,
-  slug, 
+  slug,
 }) => {
   return (
     <SambaLinks
       href={`/blog/${slug}`}
-      className="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 cursor-pointer w-1/5"
+      className="bg-white shadow-md rounded-lg overflow-hidden transition-transform hover:scale-105 cursor-pointer w-[calc(50%-12px)] sm:w-[calc(50%-12px)] md:w-[calc(50%-12px)] lg:w-[calc(50%-12px)] xl:w-[calc(20%-19.2px)]"
     >
       <CardImage
         imageLink={imageLink}
@@ -30,8 +30,8 @@ const BlogCard = ({
       </div>
 
       <div className="p-4 pt-0 flex justify-start text-primary900">
-        <ChevronLeft className="w-6 h-6" />
-        <h1>devamı</h1>
+        <p>devamı</p>
+        <ChevronRight className="w-6 h-6" />
       </div>
     </SambaLinks>
   );

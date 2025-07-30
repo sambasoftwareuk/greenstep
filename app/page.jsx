@@ -37,7 +37,7 @@ export default function Home() {
         isAutoSlide={true}
         isInfinite={true}
       />
-      <Blog blogData={blogData} />
+      <Blog blogData={blogData} showBreadcrumb={false} />
     </div>
   );
 }

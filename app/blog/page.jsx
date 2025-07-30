@@ -3,11 +3,11 @@ import BlogCard from "../_molecules/blogCard";
 import Breadcrumb from "../_molecules/breadCrumb";
 import blogData from "../mocks/blogData.json";
 
-const Blog = () => (
+const Blog = ({ showBreadcrumb = true }) => (
   <div className="w-full flex flex-col items-center mt-8">
-    <Breadcrumb/>
+    {showBreadcrumb && <Breadcrumb />}
     <Header1 className="m-8">Blog</Header1>
-    <div className="flex flex-wrap gap-6 justify-center mb-4">
+    <div className="flex flex-wrap gap-6 justify-center mb-4 px-1 sm:px-2 md:px-2 lg:px-8 xl:px-16">
       {blogData.map((post, index) => (
         <BlogCard
           key={index}
