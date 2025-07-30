@@ -68,5 +68,24 @@
         "href": "/hizmetler/enerji-analiz-hizmeti"
       }
     ]
+  }, 
+  {
+    "title": "Tüm Bloglar",
+    "href": "/blog",
+
+    "items": [
+      {
+        "label": "Sogutma Kulelerinde Sudaki Kati Madde Oranina Gore Dolgu Secimi Nasil Olmalidir",
+        "href": "/blog/sogutma-kulelerinde-sudaki-kati-madde-oranina-gore-dolgu-secimi-nasil-olmalidir"
+      },
+      {
+        "label": "Green Step Su Sogutma Kuleleri Nasil Calisir? Acik, Kapali Ve Dogal Cekisli Kuleler",
+        "href": "/blog/green-step-su-sogutma-kuleleri-nasil-calisir-acik-kapali-ve-dogal-cekisli-kuleler"
+      },
+      {
+        "label": "Sogutma Kuleleri Ne Amacla Kullanilir? Chiller’dan Farki Nedir?",
+        "href": "/blog/sogutma-kuleleri-ne-amacla-kullanilir-chillerdan-farki-nedir"
+      }
+    ]
   }
 ]
