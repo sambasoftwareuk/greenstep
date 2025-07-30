@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useMemo, useState } from "react";
 
@@ -55,11 +55,7 @@ export const CardImage = ({
           src={src}
           alt={`slider-image-${imageAlt ? imageAlt : randomImageAlt}`}
           fill
-          className={
-            src == "/generic-image.png"
-              ? "object-contain bg-gray-300"
-              : "object-cover"
-          }
+          className="object-contain"
         />
       </div>
     </div>
@@ -115,13 +111,13 @@ export const ProfileImage = ({ imageLink = "", imageAlt }) => {
 export const ZoomableImage = ({ imageLink, alt = "zoomable" }) => {
   const [zoomed, setZoomed] = useState(false);
 
- const toggleZoom = (e) => {
-    e.stopPropagation(); 
+  const toggleZoom = (e) => {
+    e.stopPropagation();
     setZoomed((z) => !z);
   };
 
   return (
- <Image
+    <Image
       src={imageLink}
       width={800}
       height={600}
