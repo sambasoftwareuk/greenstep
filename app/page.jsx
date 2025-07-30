@@ -5,12 +5,16 @@ import SliderComponent from "./_components/sliderComponent.jsx";
 import bannerProducts from "./mocks/bannerProducts.json";
 import mainProducts from "./constants/bigCardProducts.json";
 import CarouselSlider from "./_components/CarouselSlider.jsx";
-import blogData from "./mocks/blogData.json";
 import products from "./mocks/spareParts.json";
 import MainItemGrid from "./_components/MainItemGrid.jsx";
-import Blog from "./blog/page";
+import BlogComponent from "./_components/BlogComponent.jsx";
+import blogData from "./mocks/blogData.json";
 
 export default function Home() {
+  const recentBlogs = blogData
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 4);
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       <SliderComponent
@@ -37,7 +41,12 @@ export default function Home() {
         isAutoSlide={true}
         isInfinite={true}
       />
-      <Blog blogData={blogData} showBreadcrumb={false} />
+      <BlogComponent
+        blogData={recentBlogs}
+        title="Son Blog Yazıları"
+        maxItems={4}
+        showViewAllButton={true}
+      />
     </div>
   );
 }
