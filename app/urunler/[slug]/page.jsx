@@ -1,6 +1,6 @@
+import DetailPageTemplate from "@/app/_components/DetailPageTemp";
 import products from "../../constants/bigCardProducts.json";
 import sideMenuData from "../../mocks/sideMenuData.json";
-import DetailPageTemplate from "@/app/_components/DetailPageTemplate";
 
 export default async function ProductDetailPage({ params }) {
   const { slug } = await params;

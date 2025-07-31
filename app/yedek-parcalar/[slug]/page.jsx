@@ -1,7 +1,7 @@
 import React from "react";
 import sideMenuData from "../../mocks/sideMenuData.json";
 import spareParts from "../../mocks/spareParts.json";
-import DetailPageTemplate from "@/app/_components/DetailPageTemplate";
+import DetailPageTemplate from "@/app/_components/DetailPageTemp";
 
 export default async function SparePartDetailPage({ params }) {
   const { slug } = await params;
