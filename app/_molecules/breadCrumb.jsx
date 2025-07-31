@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Home } from "../_atoms/Icons";
 import Icon from "../_atoms/Icon";
 
-const Breadcrumb = () => {
+const Breadcrumb = ({title}) => {
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
 
@@ -31,10 +31,10 @@ const Breadcrumb = () => {
                 href={item.href}
                 className="text-primary hover:underline"
               >
-                {item.label}
+                {item.label == "Urunler" ? "Ürünler" : item.label == "Yedek-parcalar" ? "Yedek Parçalar" : item.label}
               </SambaLinks>
             ) : (
-              <span className="text-gray-500">{item.label}</span>
+              <span className="text-gray-500">{title ? title : item.label}</span>
             )}
           </li>
         ))}
