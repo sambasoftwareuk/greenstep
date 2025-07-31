@@ -41,7 +41,7 @@ const ContactPage = () => {
           ))}
         </div>
 
-        <div className="flex flex-col lg:w-2/4 sm:w-5/6 w-full">
+        <div className="flex flex-col lg:w-2/4 sm:w-9/12 w-full">
           <ContactCard
             title="Banka Bilgileri"
             rightImage="/sampleimages/excel.png"
