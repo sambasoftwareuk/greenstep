@@ -477,20 +477,6 @@ export const Email = ({ style, className = "" }) => (
   </svg>
 );
 
-export const Play = ({ style, className = "" }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    height="24px"
-    viewBox="0 0 24 24"
-    width="24px"
-    fill="currentColor"
-    style={style}
-    className={className}
-  >
-    <path d="M8 5v14l11-7z" />
-  </svg>
-);
-
 export const Menu = ({ style, className = "" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
