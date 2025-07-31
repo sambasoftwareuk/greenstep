@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <div className="w-full flex flex-col items-center mt-8 m-auto">
       <Breadcrumb />
-      <Header1>bahadir</Header1>
+      <Header1>bahadir2</Header1>
       <BlogComponent
         blogData={blogData}
         title="Blog"
