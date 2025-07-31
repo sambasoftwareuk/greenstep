@@ -19,7 +19,7 @@ export default async function ServicesDetailPage({ params }) {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <div className="text-center">
-        <Breadcrumb />
+        <Breadcrumb title={service.title} />
       </div>
       <Header1 className="text-center my-5">{service.title}</Header1>
       <div className="flex flex-col md:flex-row gap-12">

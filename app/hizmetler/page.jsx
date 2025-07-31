@@ -5,7 +5,7 @@ import Breadcrumb from "../_molecules/breadCrumb";
 export default function ServicesPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <Breadcrumb />
+      <Breadcrumb title={"Hizmetler"} />
       <MainItemGrid
         items={services}
         title="Hizmetler"

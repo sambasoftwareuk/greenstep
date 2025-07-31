@@ -20,7 +20,7 @@ export default async function ProductDetailPage({ params }) {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <div className="text-center">
-        <Breadcrumb />
+        <Breadcrumb title={product.title} />
       </div>
       <Header1 className="text-center my-5">{product.title}</Header1>
 
