@@ -81,7 +81,10 @@
     "label": "Galeri",
     "href": "/galeri",
     "iconName": "Gallery",
-    "dropdown": [{ "label": "Fotograflar", "href": "galeri/fotograflar" }]
+    "dropdown": [
+      { "label": "Fotograflar", "href": "/galeri/fotograflar" },
+      { "label": "Videolar", "href": "/galeri/videolar" }
+    ]
   },
   {
     "label": "Referanslarımız",
