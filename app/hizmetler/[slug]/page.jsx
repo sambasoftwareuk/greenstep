@@ -1,8 +1,6 @@
+import DetailPageTemplate from "@/app/_components/DetailPageTemp";
 import services from "../../mocks/services.json";
-import { Header1 } from "@/app/_atoms/Headers";
-import { MobileSideMenu, SideMenu } from "@/app/_molecules/sideMenu";
 import sideMenuData from "../../mocks/sideMenuData.json";
-import Breadcrumb from "../../_molecules/breadCrumb";
 
 export default async function ServicesDetailPage({ params }) {
   const { slug } = await params;
@@ -17,25 +15,16 @@ export default async function ServicesDetailPage({ params }) {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
-      <div className="text-center">
-        <Breadcrumb />
-      </div>
-      <Header1 className="text-center my-5">{service.title}</Header1>
-      <div className="flex flex-col md:flex-row gap-12">
-        <SideMenu
-          menu={serviceMenu}
-          activeHref={`/hizmetler/${service.slug}`}
-        />
-        <MobileSideMenu
-          menu={serviceMenu}
-          activeHref={`/hizmetler/${service.slug}`}
-        />
-        <div
-          className="text-lg md:text-xl leading-relaxed w-full max-w-2xl text-justify"
-          dangerouslySetInnerHTML={{ __html: service.description }}
-        />
-      </div>
-    </div>
+    <DetailPageTemplate
+      title={service?.title}
+      description={service?.description}
+      image={service?.image}
+      menu={serviceMenu}
+      activeHref={`/hizmetler/${service.slug}`}
+      otherItems={services.filter((s) => s.slug !== slug)}
+      otherItemsTitle="Diğer Hizmetler"
+      baseHref="hizmetler"
+      notFoundText="Hizmet bulunamadı."
+    />
   );
 }
