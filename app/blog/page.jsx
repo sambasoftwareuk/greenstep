@@ -2,7 +2,7 @@ import BlogComponent from "../_components/BlogComponent";
 import Breadcrumb from "../_molecules/breadCrumb";
 import blogData from "../mocks/blogData.json";
 
-const Blog = () => {
+const BlogPage = () => {
   return (
     <div className="w-full flex flex-col items-center mt-8 m-auto">
       <Breadcrumb />
@@ -15,4 +15,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogPage;
