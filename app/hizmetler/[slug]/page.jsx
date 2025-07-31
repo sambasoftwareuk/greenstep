@@ -1,6 +1,6 @@
 import services from "../../mocks/services.json";
 import sideMenuData from "../../mocks/sideMenuData.json";
-import DetailPAgeTemplate from "@/app/_components/DetailPAgeTemplate";
+import DetailPageTemplate from "@/app/_components/DetailPageTemplate";
 
 export default async function ServicesDetailPage({ params }) {
   const { slug } = await params;
@@ -15,7 +15,7 @@ export default async function ServicesDetailPage({ params }) {
   }
 
   return (
-    <DetailPAgeTemplate
+    <DetailPageTemplate
       title={service?.title}
       description={service?.description}
       image={service?.image}

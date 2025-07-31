@@ -1,6 +1,6 @@
 import products from "../../constants/bigCardProducts.json";
 import sideMenuData from "../../mocks/sideMenuData.json";
-import DetailPAgeTemplate from "@/app/_components/DetailPAgeTemplate";
+import DetailPageTemplate from "@/app/_components/DetailPageTemplate";
 
 export default async function ProductDetailPage({ params }) {
   const { slug } = await params;
@@ -10,7 +10,7 @@ export default async function ProductDetailPage({ params }) {
   );
 
   return (
-    <DetailPAgeTemplate
+    <DetailPageTemplate
       title={product?.title}
       description={product?.description}
       image={product?.image}

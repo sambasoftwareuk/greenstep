@@ -1,7 +1,7 @@
 import React from "react";
 import sideMenuData from "../../mocks/sideMenuData.json";
 import spareParts from "../../mocks/spareParts.json";
-import DetailPAgeTemplate from "@/app/_components/DetailPAgeTemplate";
+import DetailPageTemplate from "@/app/_components/DetailPageTemplate";
 
 export default async function SparePartDetailPage({ params }) {
   const { slug } = await params;
@@ -12,7 +12,7 @@ export default async function SparePartDetailPage({ params }) {
   );
 
   return (
-    <DetailPAgeTemplate
+    <DetailPageTemplate
       title={sparePart?.title}
       description={sparePart?.description}
       image={sparePart?.image}

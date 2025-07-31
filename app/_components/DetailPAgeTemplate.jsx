@@ -5,7 +5,7 @@ import { MobileSideMenu, SideMenu } from "@/app/_molecules/sideMenu";
 import Breadcrumb from "@/app/_molecules/breadCrumb";
 import MainItemGrid from "@/app/_components/MainItemGrid";
 
-const DetailPAgeTemplate = ({
+const DetailPageTemplate = ({
   title,
   description,
   image,
@@ -53,4 +53,4 @@ const DetailPAgeTemplate = ({
   );
 };
 
-export default DetailPAgeTemplate;
+export default DetailPageTemplate;
