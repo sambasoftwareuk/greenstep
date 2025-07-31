@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "../_atoms/Icons";
 import Icon from "../_atoms/Icon";
@@ -14,18 +14,22 @@ export const SambaSlider = ({
   showArrows = true,
   size = "sm",
   initialSlide = 0,
+  onSlideChange,
 }) => {
   const scrollRef = useRef(null);
   const intervalRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(initialSlide); 
+  const [currentIndex, setCurrentIndex] = useState(initialSlide);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const childArray = useMemo(() => React.Children.toArray(children), [children]);
+  const childArray = useMemo(
+    () => React.Children.toArray(children),
+    [children]
+  );
   const totalSlides = Math.ceil(childArray.length / itemsPerSlide);
   const isSingleItem = itemsPerSlide === 1;
 
-    useEffect(() => {
+  useEffect(() => {
     setCurrentIndex(initialSlide);
   }, [initialSlide]);
 
@@ -65,27 +69,35 @@ export const SambaSlider = ({
     }
   }, [childArray]);
 
-  const scrollLeft = () => scrollRef.current?.scrollBy({ left: -200, behavior: "smooth" });
-  const scrollRight = () => scrollRef.current?.scrollBy({ left: 200, behavior: "smooth" });
+  const scrollLeft = () =>
+    scrollRef.current?.scrollBy({ left: -200, behavior: "smooth" });
+  const scrollRight = () =>
+    scrollRef.current?.scrollBy({ left: 200, behavior: "smooth" });
 
-  const goToSlide = (index) => setCurrentIndex(index);
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+    if (onSlideChange) onSlideChange(index);
+  };
 
   const nextSlide = () => {
-  setCurrentIndex((prev) =>
-    isInfinite
-      ? (prev + itemsPerSlide) % childArray.length
-      : Math.min(prev + itemsPerSlide, childArray.length - itemsPerSlide)
-  );
-};
+    setCurrentIndex((prev) => {
+      const newIndex = isInfinite
+        ? (prev + itemsPerSlide) % childArray.length
+        : Math.min(prev + itemsPerSlide, childArray.length - itemsPerSlide);
+      if (onSlideChange) onSlideChange(newIndex);
+      return newIndex;
+    });
+  };
 
-const prevSlide = () => {
-  setCurrentIndex((prev) =>
-    isInfinite
-      ? (prev - itemsPerSlide + childArray.length) % childArray.length
-      : Math.max(prev - itemsPerSlide, 0)
-  );
-};
-
+  const prevSlide = () => {
+    setCurrentIndex((prev) => {
+      const newIndex = isInfinite
+        ? (prev - itemsPerSlide + childArray.length) % childArray.length
+        : Math.max(prev - itemsPerSlide, 0);
+      if (onSlideChange) onSlideChange(newIndex);
+      return newIndex;
+    });
+  };
 
   const sizeClass =
     size === "lg"
@@ -114,7 +126,10 @@ const prevSlide = () => {
           />
         )}
 
-        <div ref={scrollRef} className={`overflow-x-auto scrollbar-hide px-8 py-2`}>
+        <div
+          ref={scrollRef}
+          className={`overflow-x-auto scrollbar-hide px-8 py-2`}
+        >
           <div className="flex gap-2">
             {childArray.map((child, i) => (
               <div key={i} className="shrink-0">
@@ -128,70 +143,78 @@ const prevSlide = () => {
   }
 
   // 👇 SLIDE VARIANT
-const getExtendedSlides = () => {
-  if (isInfinite && childArray.length > 0) {
-    // Slider kapanmasın diye, itemsPerSlide kadar başa ekleme yapılır
-    return [...childArray, ...childArray.slice(0, itemsPerSlide)];
-  }
-  return childArray;
-};
+  const getExtendedSlides = () => {
+    if (isInfinite && childArray.length > 0) {
+      // Slider kapanmasın diye, itemsPerSlide kadar başa ekleme yapılır
+      return [...childArray, ...childArray.slice(0, itemsPerSlide)];
+    }
+    return childArray;
+  };
 
-const extendedSlides = useMemo(() => getExtendedSlides(), [childArray, isInfinite, itemsPerSlide]);
+  const extendedSlides = useMemo(
+    () => getExtendedSlides(),
+    [childArray, isInfinite, itemsPerSlide]
+  );
 
-
-return (
-  <div className={`relative w-full overflow-hidden mx-auto ${isSingleItem ? sizeClass : ""}`}>
-  <div
-    className="flex transition-transform duration-500 ease-in-out"
-    style={{
-      transform: `translateX(-${(currentIndex * 100) / extendedSlides.length}%)`,
-      width: `${(extendedSlides.length * 100) / itemsPerSlide}%`,
-    }}
-  >
-    {extendedSlides.map((child, i) => (
+  return (
+    <div
+      className={`relative w-full overflow-hidden mx-auto ${
+        isSingleItem ? sizeClass : ""
+      }`}
+    >
       <div
-        key={i}
-        style={{ flex: `0 0 ${100 / extendedSlides.length}%` }}
-        className="w-full flex-shrink-0"
+        className="flex transition-transform duration-500 ease-in-out"
+        style={{
+          transform: `translateX(-${
+            (currentIndex * 100) / extendedSlides.length
+          }%)`,
+          width: `${(extendedSlides.length * 100) / itemsPerSlide}%`,
+        }}
       >
-        {child}
+        {extendedSlides.map((child, i) => (
+          <div
+            key={i}
+            style={{ flex: `0 0 ${100 / extendedSlides.length}%` }}
+            className="w-full flex-shrink-0"
+          >
+            {child}
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 
-  {/* Arrows */}
-  {showArrows && (isInfinite || currentIndex > 0) && (
-    <DirectionButton
-      icon={<Icon variant={ChevronLeft} size={32} />}
-      className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
-      onClick={prevSlide}
-    />
-  )}
-  {showArrows &&
-    (isInfinite || currentIndex < childArray.length - itemsPerSlide) && (
-      <DirectionButton
-        icon={<Icon variant={ChevronRight} size={32} />}
-        className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
-        onClick={nextSlide}
-      />
-    )}
-
-  {/* Dots */}
-  {showDots && (
-    <div className="hidden md:flex justify-center mt-4 space-x-2">
-      {Array.from({ length: totalSlides }).map((_, index) => (
-        <button
-          key={index}
-          onClick={() => goToSlide(index * itemsPerSlide)}
-          className={`w-3 h-3 rounded-full ${
-            currentIndex / itemsPerSlide === index ? "bg-black" : "bg-gray-300"
-          }`}
+      {/* Arrows */}
+      {showArrows && (isInfinite || currentIndex > 0) && (
+        <DirectionButton
+          icon={<Icon variant={ChevronLeft} size={32} />}
+          className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+          onClick={prevSlide}
         />
-      ))}
+      )}
+      {showArrows &&
+        (isInfinite || currentIndex < childArray.length - itemsPerSlide) && (
+          <DirectionButton
+            icon={<Icon variant={ChevronRight} size={32} />}
+            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+            onClick={nextSlide}
+          />
+        )}
+
+      {/* Dots */}
+      {showDots && (
+        <div className="hidden md:flex justify-center mt-4 space-x-2">
+          {Array.from({ length: totalSlides }).map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index * itemsPerSlide)}
+              className={`w-3 h-3 rounded-full ${
+                currentIndex / itemsPerSlide === index
+                  ? "bg-black"
+                  : "bg-gray-300"
+              }`}
+            />
+          ))}
+        </div>
+      )}
     </div>
-  )}
-</div>
-
-);
-
+  );
 };
