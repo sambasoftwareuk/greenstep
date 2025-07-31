@@ -20,11 +20,9 @@ const Videos = () => {
 
   // Slider değiştiğinde önceki videoları durdur
   const handleSlideChange = (newIndex) => {
-    // Tüm iframe'leri bul ve durdur
     const iframes = document.querySelectorAll("iframe");
     iframes.forEach((iframe) => {
       if (iframe.src && iframe.src.includes("youtube.com")) {
-        // YouTube iframe'ini durdur
         const videoId = iframe.src.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
         if (videoId) {
           iframe.src = iframe.src.replace(/autoplay=1/, "autoplay=0");
@@ -36,11 +34,9 @@ const Videos = () => {
   // Modal açıldığında tüm iframe'leri durdur
   useEffect(() => {
     if (selectedVideoIndex !== null) {
-      // Tüm iframe'leri bul ve durdur
       const iframes = document.querySelectorAll("iframe");
       iframes.forEach((iframe) => {
         if (iframe.src && iframe.src.includes("youtube.com")) {
-          // YouTube iframe'ini durdur
           const videoId = iframe.src.match(/embed\/([a-zA-Z0-9_-]+)/)?.[1];
           if (videoId) {
             iframe.src = iframe.src.replace(/autoplay=1/, "autoplay=0");
@@ -55,16 +51,16 @@ const Videos = () => {
     const baseUrl = videoLink;
     const params = new URLSearchParams({
       autoplay: shouldAutoplay ? "1" : "0",
-      controls: "1", // Kontrolleri göster
-      disablekb: "0", // Klavye kontrollerini etkinleştir
-      fs: "1", // Fullscreen butonunu göster
+      controls: "1", 
+      disablekb: "0", 
+      fs: "1", 
       iv_load_policy: "3",
       modestbranding: "1",
       rel: "0",
-      showinfo: "1", // Video bilgilerini göster
+      showinfo: "1", 
       loop: "1",
       playlist: videoLink.split("/").pop(),
-      mute: "0", // Ses açık
+      mute: "0", 
     });
     return `${baseUrl}?${params.toString()}`;
   };
