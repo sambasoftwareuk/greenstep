@@ -68,7 +68,7 @@
         "href": "/hizmetler/enerji-analiz-hizmeti"
       }
     ]
-  }, 
+  },
   {
     "title": "Tüm Bloglar",
     "href": "/blog",
@@ -85,6 +85,14 @@
       {
         "label": "Sogutma Kuleleri Ne Amacla Kullanilir? Chiller’dan Farki Nedir?",
         "href": "/blog/sogutma-kuleleri-ne-amacla-kullanilir-chillerdan-farki-nedir"
+      },
+      {
+        "label": "Soğutma kulelerinde çevrim sularının filtrasyon yöntemleri",
+        "href": "/blog/sogutma-kulelerinde-cevrim-sularinin-filtrasyon-yontemleri"
+      },
+      {
+        "label": "Greentower soğutma kuleleri doğaya ve çevreye zarar verir mi?",
+        "href": "/blog/greentower-sogutma-kuleleri-dogaya-ve-cevreye-zarar-verir-mi"
       }
     ]
   }
