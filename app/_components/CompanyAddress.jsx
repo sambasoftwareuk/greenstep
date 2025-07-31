@@ -11,13 +11,13 @@ const CompanyAddress = ({ className = "" }) => {
         rel="noopener noreferrer"
         className="hover:underline"
       >
-        Alemdag Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL
+        Alemdağ Mah. Saray Cad. 111. Sk. No:1-3 Daire:10 Çekmeköy/ISTANBUL
       </Link>
       <Link href="tel:+902163046868" className="hover:underline">
         +90 216 304 68 68
       </Link>
-      <Link href="mailto:info@ctpmuhendislik.com" className="hover:underline">
-        info@ctpmuhendislik.com
+      <Link href="mailto:info@greenstepcoolingtowers.com" className="hover:underline">
+        info@greenstepcoolingtowers.com
       </Link>
     </address>
   );

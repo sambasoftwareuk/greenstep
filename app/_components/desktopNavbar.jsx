@@ -54,10 +54,10 @@ const DesktopNavbar = () => {
           <span className="inline-block w-px h-7 bg-gray-300 mx-3" />
 
           {/* Icons */}
-          <div className="flex">
+          {/* <div className="flex">
             <IconOnlyButton icon={<Icon variant={TurkishFlag} size={24} />} />
             <IconOnlyButton icon={<Icon variant={UKFlag} size={22} />} />
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>
