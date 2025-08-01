@@ -12,7 +12,7 @@ const DesktopNavbar = () => {
     <header className="w-full border-b bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 md:px-8 py-3 gap-2 max-w-full">
         {/* Logo */}
-        <div>
+        <div className="ml-[10%]">
           <Link href="/">
             <LogoImage imageLink={Logo.imageLink} width={200} height={40} />
           </Link>

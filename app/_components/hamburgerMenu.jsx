@@ -48,7 +48,7 @@ const HamburgerMenu = () => {
           icon={<Icon variant={HamburgerIcon} size={25} />}
         />
         <Link href="/">
-          <Image src="/green-step-logo.png" alt="logo" width={70} height={70} />
+          <Image src="/green-step-logo.png" alt="logo" width={120} height={70} />
         </Link>
         <div className="flex items-center gap-0">
           <IconOnlyButton icon={<Icon variant={Search} size={20} />} />
