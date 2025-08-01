@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Merriweather } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import { Footer } from "./_components/footer";
-import AnnouncementBand from "./_components/announcementBand";
 import WhatsAppStickyButton from "./_components/whatsAppStickyButton";
 import ScrollToTopButton from "./_components/ScrollToTopButton";
 
@@ -19,7 +18,7 @@ const geistMono = Geist_Mono({
 const merriweather = Merriweather({
   variable: "--font-merriweather",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"], // Burada hatayı düzelttik
+  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata = {
@@ -33,7 +32,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
-        <AnnouncementBand />
         <Navbar />
         <main id="top">{children}</main>
         <Footer />
