@@ -22,6 +22,11 @@ export const SambaSlider = ({
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
+  // Touch/swipe için state'ler
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const [isDragging, setIsDragging] = useState(false);
+
   const childArray = useMemo(
     () => React.Children.toArray(children),
     [children]
@@ -99,6 +104,35 @@ export const SambaSlider = ({
     });
   };
 
+  // Touch event handlers
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsDragging(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!touchStart) return;
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      nextSlide();
+    } else if (isRightSwipe) {
+      prevSlide();
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+    setIsDragging(false);
+  };
+
   const sizeClass =
     size === "lg"
       ? "h-[450px] sm:h-[600px]"
@@ -161,9 +195,14 @@ export const SambaSlider = ({
       className={`relative w-full overflow-hidden mx-auto ${
         isSingleItem ? sizeClass : ""
       }`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className={`flex transition-transform duration-500 ease-in-out ${
+          isDragging ? "transition-none" : ""
+        }`}
         style={{
           transform: `translateX(-${
             (currentIndex * 100) / extendedSlides.length
@@ -186,7 +225,7 @@ export const SambaSlider = ({
       {showArrows && (isInfinite || currentIndex > 0) && (
         <DirectionButton
           icon={<Icon variant={ChevronLeft} size={32} />}
-          className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+          className="flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
           onClick={prevSlide}
         />
       )}
@@ -194,14 +233,14 @@ export const SambaSlider = ({
         (isInfinite || currentIndex < childArray.length - itemsPerSlide) && (
           <DirectionButton
             icon={<Icon variant={ChevronRight} size={32} />}
-            className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+            className="flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
             onClick={nextSlide}
           />
         )}
 
       {/* Dots */}
       {showDots && (
-        <div className="hidden md:flex justify-center mt-4 space-x-2">
+        <div className="flex justify-center mt-4 space-x-2">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
