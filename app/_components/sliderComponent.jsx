@@ -11,9 +11,9 @@ const SliderComponent = ({ size, variant, sliderData = [], orientation }) => {
       isInfinite={true}
     >
       {sliderData.map((content, index) => {
-        const { link, title, subtitle, body, primaryLabel, secondaryLabel } =
+        const { imageLink, title, subtitle, body, primaryLabel, primaryLabelLink, secondaryLabel, secondaryLabelLink } =
           content;
-        const hasImage = !!link;
+        const hasImage = !!imageLink;
         const hasCard =
           title || subtitle || body || primaryLabel || secondaryLabel;
 
@@ -36,7 +36,7 @@ const SliderComponent = ({ size, variant, sliderData = [], orientation }) => {
             : ""
         }`}
     >
-      <SliderImage imageLink={`/${link}`} size={size} orientation={orientation} />
+      <SliderImage imageLink={`/${imageLink}`} size={size} orientation={orientation} />
     </div>
   )}
 
@@ -67,7 +67,9 @@ const SliderComponent = ({ size, variant, sliderData = [], orientation }) => {
           subtitle={subtitle}
           body={body}
           primaryLabel={primaryLabel}
+          primaryLabelLink={primaryLabelLink}
           secondaryLabel={secondaryLabel}
+          secondaryLabelLink={secondaryLabelLink}
         />
       </div>
     </div>
