@@ -3,15 +3,15 @@ import React from "react";
 import { SambaLinks } from "../_atoms/SambaLinks";
 import { usePathname } from "next/navigation";
 import { Home } from "../_atoms/Icons";
-import Icon from "../_atoms/Icon";
 
 const Breadcrumb = ({title}) => {
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
 
+
   const breadcrumbItems = [
     {
-      label: <Icon variant={Home} size={18} className="text-primary" />,
+      label: <Home size={10} className="text-primary" />,
       href: "/",
     },
     ...pathParts.map((part, idx) => ({
