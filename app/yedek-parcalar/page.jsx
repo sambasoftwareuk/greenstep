@@ -6,7 +6,7 @@ import spareParts from "../mocks/spareParts.json";
 const SparePartsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-center py-12 px-4">
-      <Breadcrumb />
+      <Breadcrumb title={"Yedek Parçalar"} />
       <MainItemGrid
         items={spareParts}
         title="Yedek Parçalar"
