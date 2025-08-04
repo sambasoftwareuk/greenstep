@@ -22,8 +22,6 @@ const blogMenu = sideMenuData.filter(
   return (
     <div className="max-w-5xl mx-auto p-6">
       <div className="text-center">
-        {console.log("title", post.title)
-        }
         <Breadcrumb title={post.title} />
       </div>
 
