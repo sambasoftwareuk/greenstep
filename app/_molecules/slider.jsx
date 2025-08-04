@@ -225,7 +225,7 @@ export const SambaSlider = ({
       {showArrows && (isInfinite || currentIndex > 0) && (
         <DirectionButton
           icon={<Icon variant={ChevronLeft} size={32} />}
-          className="flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+          className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
           onClick={prevSlide}
         />
       )}
@@ -233,7 +233,7 @@ export const SambaSlider = ({
         (isInfinite || currentIndex < childArray.length - itemsPerSlide) && (
           <DirectionButton
             icon={<Icon variant={ChevronRight} size={32} />}
-            className="flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
+            className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full shadow z-10"
             onClick={nextSlide}
           />
         )}
