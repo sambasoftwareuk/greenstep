@@ -35,7 +35,6 @@ const GalleryComponent = ({ title = "Galeri", images = [] }) => {
             showArrows={true}
             size="lg"
             initialSlide={selectedIndex}
-            isModal={true}
           >
             {images.map((img, i) => (
               <div

@@ -15,7 +15,6 @@ export const SambaSlider = ({
   size = "sm",
   initialSlide = 0,
   onSlideChange,
-  isModal = false,
 }) => {
   const scrollRef = useRef(null);
   const intervalRef = useRef(null);
@@ -195,7 +194,7 @@ export const SambaSlider = ({
     <div
       className={`relative w-full overflow-hidden mx-auto ${
         isSingleItem ? sizeClass : ""
-      } ${isModal ? "h-3/6" : ""}`}
+      }`}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
