@@ -1,6 +1,13 @@
 import DetailPageTemplate from "@/app/_components/DetailPageTemp";
 import services from "../../mocks/services.json";
 import sideMenuData from "../../mocks/sideMenuData.json";
+import { getMetadataForPath } from "@/app/utils/metadataHelper";
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const path = `/hizmetler/${slug}`;
+  return getMetadataForPath(path);
+}
 
 export default async function ServicesDetailPage({ params }) {
   const { slug } = await params;

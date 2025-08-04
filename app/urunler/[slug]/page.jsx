@@ -1,7 +1,13 @@
 import DetailPageTemplate from "@/app/_components/DetailPageTemp";
 import products from "../../constants/bigCardProducts.json";
 import sideMenuData from "../../mocks/sideMenuData.json";
+import { getMetadataForPath } from "@/app/utils/metadataHelper";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const path = `/urunler/${slug}`;
+  return getMetadataForPath(path);
+}
 export default async function ProductDetailPage({ params }) {
   const { slug } = await params;
   const product = products.find((p) => p.slug === slug);

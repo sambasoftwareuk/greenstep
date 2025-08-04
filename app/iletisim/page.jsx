@@ -1,17 +1,21 @@
-"use client";
 import React from "react";
 import Breadcrumb from "../_molecules/breadCrumb";
 import ContactCard from "../_molecules/contactCard";
-import ContactForm from "../_molecules/contactForm";
-import { Header1, Header2, Header3 } from "../_atoms/Headers";
+import { Header1, Header3 } from "../_atoms/Headers";
 import contactData from "../mocks/contactData.json";
+import ContactFormWrapper from "../_components/ContactFormWrapper";
+import { getMetadataForPath } from "../utils/metadataHelper";
+
+export async function generateMetadata() {
+  const meta = getMetadataForPath("/iletisim");
+
+  return {
+    title: meta.title,
+    description: meta.description,
+  };
+}
 
 const ContactPage = () => {
-  const handleFormSubmit = (formData) => {
-    console.log("Form submitted:", formData);
-    // API çağrısı 
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="flex container mx-auto px-4 py-8 flex-col justify-center items-center">
@@ -96,11 +100,10 @@ const ContactPage = () => {
             </div>
           </ContactCard>
 
-        <ContactForm
-          onSubmit={handleFormSubmit}
-          kvkkLink="/kvkk-aydinlatma-metni"
-          className="w-full mb-12 text-center"
-        />
+          <ContactFormWrapper
+            kvkkLink="/kvkk-aydinlatma-metni"
+            className="w-full mb-12 text-center"
+          />
           {/* İletişim Formu */}
         </div>
 

@@ -6,16 +6,7 @@ import Modal from "@/app/_molecules/modal";
 import { SambaSlider } from "@/app/_molecules/slider";
 import { useState } from "react";
 
-
-
-const images = [
-  "/4.jpg",
-  "/5.jpg",
-  "/6.jpg",
-  "/7.jpg",
-  "/8.jpg",
-  "/9.jpg"
-];
+const images = ["/4.jpg", "/5.jpg", "/6.jpg", "/7.jpg", "/8.jpg", "/9.jpg"];
 
 const GalleryPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -48,7 +39,10 @@ const GalleryPage = () => {
             initialSlide={selectedIndex}
           >
             {images.map((img, i) => (
-              <div key={i} className="w-full h-full flex justify-center items-center">
+              <div
+                key={i}
+                className="w-full h-full flex justify-center items-center"
+              >
                 <ZoomableImage imageLink={img} aspectRatio="aspect-[4/3]" />
               </div>
             ))}
