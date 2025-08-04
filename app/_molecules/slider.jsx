@@ -192,7 +192,7 @@ export const SambaSlider = ({
 
   return (
     <div
-      className={`relative w-full overflow-hidden mx-auto ${
+      className={`relative w-full overflow-hidden mx-auto h-3/6${
         isSingleItem ? sizeClass : ""
       }`}
       onTouchStart={handleTouchStart}
