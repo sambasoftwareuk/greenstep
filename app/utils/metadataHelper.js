@@ -6,13 +6,13 @@ const TITLE_PATTERN = "%s - " + BRAND_SUFFIX;
 export function getMetadataForPath(pathname) {
   const meta = metadataMap[pathname];
 
-  // Get fallback segment name (e.g., 'urunler')
-  const routeSegment = __dirname.split("/").pop();
+  // fallbackSegment = last part of the pathname (e.g., 'monoblok')
+  const fallbackSegment =
+    pathname.split("/").filter(Boolean).slice(-1)[0] || "Greenstep";
 
   return {
     title:
-      meta?.title ||
-      TITLE_PATTERN.replace("%s", capitalize(routeSegment || "Greenstep")),
+      meta?.title || TITLE_PATTERN.replace("%s", capitalize(fallbackSegment)),
     description:
       meta?.description ||
       "Greenstep su soğutma kuleleri ile ilgili detaylı bilgi alın.",
