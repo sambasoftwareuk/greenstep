@@ -2,6 +2,11 @@ import React from "react";
 import products from "../constants/bigCardProducts.json";
 import MainItemGrid from "../_components/MainItemGrid";
 import Breadcrumb from "../_molecules/breadCrumb";
+import { getMetadataForPath } from "../utils/metadataHelper";
+
+export async function generateMetadata() {
+  return getMetadataForPath("/urunler");
+}
 
 const ProductPage = () => {
   return (

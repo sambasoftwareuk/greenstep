@@ -1,6 +1,11 @@
 import services from "../mocks/services.json";
 import MainItemGrid from "../_components/MainItemGrid";
 import Breadcrumb from "../_molecules/breadCrumb";
+import { getMetadataForPath } from "../utils/metadataHelper";
+
+export async function generateMetadata() {
+  return getMetadataForPath("/hizmetler");
+}
 
 export default function ServicesPage() {
   return (
