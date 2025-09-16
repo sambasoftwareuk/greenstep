@@ -11,7 +11,7 @@ export async function generateMetadata() {
 const ProductPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-center py-12 px-4">
-      <Breadcrumb />
+      <Breadcrumb title={"Ürünler"} />
       <MainItemGrid items={products} title="Ürünlerimiz" baseHref="urunler" />
     </div>
   );

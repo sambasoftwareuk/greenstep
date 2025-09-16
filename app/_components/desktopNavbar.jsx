@@ -12,7 +12,7 @@ const DesktopNavbar = () => {
     <header className="w-full border-b bg-white shadow-sm">
       <nav className="flex items-center justify-between px-4 md:px-8 py-3 gap-2 max-w-full">
         {/* Logo */}
-        <div>
+        <div className="ml-[10%]">
           <Link href="/">
             <LogoImage imageLink={Logo.imageLink} width={200} height={40} />
           </Link>
@@ -54,10 +54,10 @@ const DesktopNavbar = () => {
           <span className="inline-block w-px h-7 bg-gray-300 mx-3" />
 
           {/* Icons */}
-          <div className="flex">
+          {/* <div className="flex">
             <IconOnlyButton icon={<Icon variant={TurkishFlag} size={24} />} />
             <IconOnlyButton icon={<Icon variant={UKFlag} size={22} />} />
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>

@@ -9,13 +9,13 @@ const AnnouncementBand = () => {
       className="
         hidden lg:flex
         w-full bg-primary h-12
-        items-center justify-around
+        items-center gap-10
         px-4 text-md text-black
         
         text-sm md:text-base lg:text-md
       "
     >
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 ml-[15%]">
         {socialIcons?.map(({ href, svg, alt, bgColor }) => (
           <Link
             key={alt}
@@ -35,7 +35,7 @@ const AnnouncementBand = () => {
         ))}
       </div>
 
-      <CompanyAddress className="flex flex-wrap items-center justify-center text-white text-xs md:text-sm lg:text-base text-center gap-4" />
+      <CompanyAddress className="flex flex-wrap items-center justify-center text-white text-xs md:text-sm lg:text-base text-center gap-0" />
     </div>
   );
 };

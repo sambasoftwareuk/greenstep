@@ -2,7 +2,6 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import { Footer } from "./_components/footer";
-import AnnouncementBand from "./_components/announcementBand";
 import WhatsAppStickyButton from "./_components/whatsAppStickyButton";
 import ScrollToTopButton from "./_components/ScrollToTopButton";
 import { getMetadataForPath } from "./utils/metadataHelper";

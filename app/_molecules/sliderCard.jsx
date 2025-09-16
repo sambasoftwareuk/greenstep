@@ -1,16 +1,31 @@
 "use client";
 import React from "react";
 import { PrimaryButton } from "../_atoms/buttons";
+import { useRouter } from "next/navigation";
 
 export default function SliderCard({
   title,
   subtitle,
   primaryLabel,
-  onPrimaryClick,
+  primaryLabelLink,
   body,
   secondaryLabel,
-  onSecondaryClick,
+  secondaryLabelLink,
 }) {
+  const router = useRouter();
+
+  const onPrimaryClick = () => {
+    if (primaryLabelLink) {
+      router.push(primaryLabelLink);
+    }
+  };
+
+  const onSecondaryClick = () => {
+    if (secondaryLabelLink) {
+      router.push(secondaryLabelLink);
+    }
+  };
+
   return (
     <div className="rounded-4xl shadow-lg bg-white p-12 max-w-md w-full flex flex-col justify-between h-full">
       <div>

@@ -299,7 +299,7 @@ export const UKFlag = ({ style, className = "" }) => (
 export const socialIcons = [
   {
     alt: "Facebook",
-    href: "https://facebook.com/ctpmuhendislik",
+    href: "https://facebook.com/",
     bgColor: "#1877F2",
     svg: (
       <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
@@ -309,7 +309,7 @@ export const socialIcons = [
   },
   {
     alt: "Instagram",
-    href: "https://instagram.com/ctpmuhendislik",
+    href: "https://www.instagram.com/greenstep_cooling_towers/",
     bgColor: "#E4405F",
     svg: (
       <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
@@ -319,7 +319,7 @@ export const socialIcons = [
   },
   {
     alt: "YouTube",
-    href: "https://www.youtube.com/@ctpmuhendisliksusogutmakul5225",
+    href: "https://www.youtube.com/",
     bgColor: "transparent",
     svg: (
       <svg
@@ -335,7 +335,7 @@ export const socialIcons = [
   },
   {
     alt: "Twitter",
-    href: "https://twitter.com/ctpmuhendislik",
+    href: "https://twitter.com/",
     bgColor: "#1DA1F2",
     svg: (
       <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
@@ -345,7 +345,7 @@ export const socialIcons = [
   },
   {
     alt: "LinkedIn",
-    href: "https://www.linkedin.com/company/ctp-muhendislik-su-sogutma-kuleleri/",
+    href: "https://www.linkedin.com/",
     bgColor: "#0A66C2",
     svg: (
       <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
@@ -355,7 +355,7 @@ export const socialIcons = [
   },
   {
     alt: "Pinterest",
-    href: "https://pinterest.com/ctpmuhendislik",
+    href: "https://pinterest.com/",
     bgColor: "#E60023",
     svg: (
       <svg width="20" height="20" fill="#fff" viewBox="0 0 24 24">
