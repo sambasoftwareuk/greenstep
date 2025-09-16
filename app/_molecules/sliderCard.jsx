@@ -29,10 +29,8 @@ export default function SliderCard({
   return (
     <div className="rounded-4xl shadow-lg bg-white p-12 max-w-md w-full flex flex-col justify-between h-full">
       <div>
-        <h1 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-          {title}
-        </h1>
-        <h2 className="hidden md:flex text-gray-700 text-base">{subtitle}</h2>
+        <h1 className="text-xl md:text-2xl font-bold mb-2">{title}</h1>
+        <h2 className="hidden md:flex text-gray-800 text-base">{subtitle}</h2>
       </div>
       <div>{body && <p className="text-gray-600 text-sm mt-4">{body}</p>}</div>
 

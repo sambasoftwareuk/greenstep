@@ -27,7 +27,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${roboto.variable}  antialiased`}>
-        <AnnouncementBand />
         <Navbar />
         <main id="top">{children}</main>
         <Footer />

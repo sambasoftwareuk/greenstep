@@ -24,7 +24,7 @@ const BlogCard = ({
       />
 
       <div className="p-4">
-        <p className="text-sm text-red mb-1">{date}</p>
+        <p className="text-sm text-ruby mb-1">{date}</p>
         <h3 className="text-lg font-bold mb-2">{title}</h3>
         <p className="text-gray-700 text-sm line-clamp-3">{excerpt}</p>
       </div>

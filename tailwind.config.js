@@ -20,14 +20,11 @@ module.exports = {
         secondary200: "#C5D3D4", // Açık gri-mavi
         secondary100: "#E4EFEF", // Çok açık nötr gri-mavi
 
-        red: "#CC3D4D", // Hafif sıcaklık barındıran kırmızı tonu
-        red100: "#F9D3D7", // Açık pembe/kırmızı pastel tonu
+        ruby: "#CC3D4D", // Hafif sıcaklık barındıran kırmızı tonu
+        ruby100: "#F9D3D7", // Açık pembe/kırmızı pastel tonu
 
         sunshine: "#f6b009", // Turkuaza uyumlu sıcak sarı
         sunshine100: "#FFEAC2", // Açık, yumuşak sarı pastel tonu
-
-        white: "#ffffff", // Değişmedi
-        black: "#000000", // Değişmedi
 
         border: "#d6e3e3", // Cam göbeği temalı açık gri (border için)
       },
