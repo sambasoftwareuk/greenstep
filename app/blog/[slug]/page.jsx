@@ -1,5 +1,4 @@
 import blogData from "@/app/mocks/blogData.json";
-import { Header1 } from "@/app/_atoms/Headers";
 import Breadcrumb from "@/app/_molecules/breadCrumb";
 import { notFound } from "next/navigation";
 import Image from "next/image";
@@ -15,7 +14,7 @@ export default function BlogDetailPage({ params }) {
     notFound();
   }
 
-const blogMenu = sideMenuData.filter(
+  const blogMenu = sideMenuData.filter(
     (section) => section.title === "Tüm Bloglar"
   );
 
@@ -25,14 +24,13 @@ const blogMenu = sideMenuData.filter(
         <Breadcrumb />
       </div>
 
-      <Header1 className="text-center my-5 w-full lg:w-1/2 max-w-2xl m-auto">{post.title}</Header1>
+      <h1 className="text-center my-5 w-full lg:w-1/2 max-w-2xl m-auto">
+        {post.title}
+      </h1>
 
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <SideMenu menu={blogMenu} activeHref={`/blog/${post.slug}`} />
-        <MobileSideMenu
-          menu={blogMenu}
-          activeHref={`/blog/${post.slug}`}
-        />
+        <MobileSideMenu menu={blogMenu} activeHref={`/blog/${post.slug}`} />
         <div className="prose prose-lg w-full lg:w-1/2 max-w-2xl text-justify">
           <p className="text-red-500 text-sm mb-4">{post.date}</p>
           <p className="text-lg md:text-xl leading-relaxed text-justify">

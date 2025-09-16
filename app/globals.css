@@ -9,3 +9,19 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+body {
+  font-family: var(--font-roboto), sans-serif;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl font-bold text-primary;
+  }
+  h2 {
+    @apply text-2xl font-bold text-primary;
+  }
+  h3 {
+    @apply text-xl font-bold text-primary;
+  }
+}

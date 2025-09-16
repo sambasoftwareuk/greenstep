@@ -1,29 +1,30 @@
-"use client"
+"use client";
 import React from "react";
 import { SambaSlider } from "../_molecules/slider";
 import ProductCardWithImage from "../_molecules/productCardWithImage";
-import { Header1 } from "../_atoms/Headers";
 import { useWindowSize } from "../utils/useWindowSize";
 
-const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinite }) => {
-  
+const CarouselSlider = ({
+  data,
+  itemsPerSlide = 4,
+  title,
+  isAutoSlide,
+  isInfinite,
+}) => {
   const { width } = useWindowSize();
 
   const getResponsiveItems = () => {
-    if (width < 640) return 1;      // mobile
-    if (width < 768) return 2;      // sm
-    if (width < 1024) return 3;     // md
-    return itemsPerSlide;           // lg ve üstü
+    if (width < 640) return 1; // mobile
+    if (width < 768) return 2; // sm
+    if (width < 1024) return 3; // md
+    return itemsPerSlide; // lg ve üstü
   };
 
-    const responsiveItems = getResponsiveItems();
-
+  const responsiveItems = getResponsiveItems();
 
   return (
     <div className="mt-2 w-[90%] md:w-[85%] lg:w-[80%] xl:w-[75%] mx-auto">
-       {title && (
-        <Header1 className="text-center">{title}</Header1>
-      )}
+      {title && <h1 className="text-center">{title}</h1>}
 
       <SambaSlider
         variant="slide"
@@ -45,7 +46,7 @@ const CarouselSlider = ({ data, itemsPerSlide = 4, title, isAutoSlide, isInfinit
         ))}
       </SambaSlider>
     </div>
-  )
-}
+  );
+};
 
 export default CarouselSlider;

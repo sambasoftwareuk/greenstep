@@ -1,6 +1,5 @@
 "use client";
 
-import { Header1 } from "@/app/_atoms/Headers";
 import { CardImage, ZoomableImage } from "@/app/_atoms/images";
 import Modal from "@/app/_molecules/modal";
 import { SambaSlider } from "@/app/_molecules/slider";
@@ -13,7 +12,7 @@ const GalleryPage = () => {
 
   return (
     <div className="px-4 py-8 max-w-screen-xl mx-auto">
-      <Header1 className="mb-6 text-center">Fotoğraflar</Header1>
+      <h1 className="mb-6 text-center">Fotoğraflar</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {images.map((img, index) => (

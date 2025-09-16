@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Header1 } from "@/app/_atoms/Headers";
 import { MobileSideMenu, SideMenu } from "@/app/_molecules/sideMenu";
 import Breadcrumb from "@/app/_molecules/breadCrumb";
 import MainItemGrid from "@/app/_components/MainItemGrid";
@@ -24,7 +23,7 @@ const DetailPageTemplate = ({
       <div className="text-center">
         <Breadcrumb />
       </div>
-      <Header1 className="text-center my-5">{title}</Header1>
+      <h1 className="text-center my-5">{title}</h1>
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <SideMenu menu={menu} activeHref={activeHref} />
         <MobileSideMenu menu={menu} activeHref={activeHref} />
@@ -42,7 +41,7 @@ const DetailPageTemplate = ({
           />
         </div>
       </div>
-      <Header1 className="text-center my-8">{otherItemsTitle}</Header1>
+      <h1 className="text-center my-8">{otherItemsTitle}</h1>
       <MainItemGrid
         items={otherItems}
         baseHref={baseHref}

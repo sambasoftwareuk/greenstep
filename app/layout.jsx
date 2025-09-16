@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Merriweather } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/navbar";
 import { Footer } from "./_components/footer";
@@ -7,22 +7,11 @@ import WhatsAppStickyButton from "./_components/whatsAppStickyButton";
 import ScrollToTopButton from "./_components/ScrollToTopButton";
 import { getMetadataForPath } from "./utils/metadataHelper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"], // Burada hatayı düzelttik
-});
-
 export function generateMetadata() {
   const meta = getMetadataForPath("/");
 
@@ -38,9 +27,7 @@ export function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
-      >
+      <body className={` ${roboto.variable}  antialiased`}>
         <AnnouncementBand />
         <Navbar />
         <main id="top">{children}</main>

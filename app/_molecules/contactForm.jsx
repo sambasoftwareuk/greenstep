@@ -1,51 +1,50 @@
-'use client';
-import React, { useState } from 'react';
-import { Header2 } from '../_atoms/Headers';
-import { InputBasic } from '../_atoms/inputs';
-import { Checkbox } from '../_atoms/checkbox';
-import { PrimaryButton } from '../_atoms/buttons';
+"use client";
+import React, { useState } from "react";
+import { InputBasic } from "../_atoms/inputs";
+import { Checkbox } from "../_atoms/checkbox";
+import { PrimaryButton } from "../_atoms/buttons";
 
-const ContactForm = ({ 
+const ContactForm = ({
   title = "Bize Ulaşın",
   kvkkLink = "#",
   onSubmit,
-  className = "" 
+  className = "",
 }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phone: '',
-    message: '',
-    kvkkAccepted: false
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+    kvkkAccepted: false,
   });
 
   const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
     // Hata mesajını temizle
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: "",
       }));
     }
   };
 
   const handleCheckboxChange = (e) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      kvkkAccepted: e.target.checked
+      kvkkAccepted: e.target.checked,
     }));
     if (errors.kvkkAccepted) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        kvkkAccepted: ''
+        kvkkAccepted: "",
       }));
     }
   };
@@ -54,25 +53,25 @@ const ContactForm = ({
     const newErrors = {};
 
     if (!formData.firstName.trim()) {
-      newErrors.firstName = 'Ad alanı zorunludur';
+      newErrors.firstName = "Ad alanı zorunludur";
     }
 
     if (!formData.lastName.trim()) {
-      newErrors.lastName = 'Soyad alanı zorunludur';
+      newErrors.lastName = "Soyad alanı zorunludur";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'E-posta alanı zorunludur';
+      newErrors.email = "E-posta alanı zorunludur";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Geçerli bir e-posta adresi giriniz';
+      newErrors.email = "Geçerli bir e-posta adresi giriniz";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Mesaj alanı zorunludur';
+      newErrors.message = "Mesaj alanı zorunludur";
     }
 
     if (!formData.kvkkAccepted) {
-      newErrors.kvkkAccepted = 'KVKK ve Aydınlatma Metni\'ni kabul etmelisiniz';
+      newErrors.kvkkAccepted = "KVKK ve Aydınlatma Metni'ni kabul etmelisiniz";
     }
 
     setErrors(newErrors);
@@ -81,20 +80,20 @@ const ContactForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (validateForm()) {
       if (onSubmit) {
         onSubmit(formData);
       } else {
-        alert('Mesajınız başarıyla gönderildi!');
-        
+        alert("Mesajınız başarıyla gönderildi!");
+
         setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          message: '',
-          kvkkAccepted: false
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+          kvkkAccepted: false,
         });
       }
     }
@@ -102,8 +101,8 @@ const ContactForm = ({
 
   return (
     <div className={`bg-white rounded-lg shadow-md p-6 ${className}`}>
-      <Header2 className="text-center mb-6 text-primary">{title}</Header2>
-      
+      <h2 className="text-center mb-6 text-primary">{title}</h2>
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -113,13 +112,13 @@ const ContactForm = ({
               placeholder="Adınız *"
               value={formData.firstName}
               onChange={handleInputChange}
-              className={errors.firstName ? 'border-red-500' : ''}
+              className={errors.firstName ? "border-red-500" : ""}
             />
             {errors.firstName && (
               <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>
             )}
           </div>
-          
+
           <div>
             <InputBasic
               type="text"
@@ -127,7 +126,7 @@ const ContactForm = ({
               placeholder="Soyadınız *"
               value={formData.lastName}
               onChange={handleInputChange}
-              className={errors.lastName ? 'border-red-500' : ''}
+              className={errors.lastName ? "border-red-500" : ""}
             />
             {errors.lastName && (
               <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>
@@ -142,7 +141,7 @@ const ContactForm = ({
             placeholder="E-posta adresiniz *"
             value={formData.email}
             onChange={handleInputChange}
-            className={errors.email ? 'border-red-500' : ''}
+            className={errors.email ? "border-red-500" : ""}
           />
           {errors.email && (
             <p className="text-red-500 text-xs mt-1">{errors.email}</p>
@@ -167,7 +166,7 @@ const ContactForm = ({
             onChange={handleInputChange}
             rows={5}
             className={`w-full border rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-purple-400 resize-none ${
-              errors.message ? 'border-red-500' : ''
+              errors.message ? "border-red-500" : ""
             }`}
           />
           {errors.message && (
@@ -180,9 +179,9 @@ const ContactForm = ({
             id="kvkk"
             label={
               <span>
-                <a 
-                  href={kvkkLink} 
-                  target="_blank" 
+                <a
+                  href={kvkkLink}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
@@ -211,4 +210,4 @@ const ContactForm = ({
   );
 };
 
-export default ContactForm; 
+export default ContactForm;

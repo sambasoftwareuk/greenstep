@@ -1,4 +1,3 @@
-import { Header1 } from "../_atoms/Headers";
 import BlogCard from "../_molecules/blogCard";
 import { SambaLinks } from "../_atoms/SambaLinks";
 
@@ -15,7 +14,7 @@ const BlogComponent = ({
 
   return (
     <div className={`w-full flex flex-col items-center mt-8 ${className}`}>
-      {showTitle && <Header1 className="m-8">{title}</Header1>}
+      {showTitle && <h1 className="m-8">{title}</h1>}
 
       {/* Blog kartları */}
       <div className="flex flex-wrap gap-6 justify-center mb-4 px-1 sm:px-2 md:px-2 lg:px-8 xl:px-16">
