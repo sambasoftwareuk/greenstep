@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Header1 } from "../_atoms/Headers";
 import Breadcrumb from "../_molecules/breadCrumb";
 import content from "../mocks/kurumsal.json";
 import Image from "next/image";
@@ -15,7 +14,7 @@ const Kurumsal = () => {
         <div className="mt-8">
           <div className="bg-white rounded-lg shadow-md p-8 max-w-4xl mx-auto flex">
             <div>
-              <Header1 className="text-primary mb-6">{content.title}</Header1>
+              <h1 className="text-primary mb-6">{content.title}</h1>
 
               <div className="prose max-w-none">
                 {content.content.map((html, index) => (
@@ -27,9 +26,7 @@ const Kurumsal = () => {
                 ))}
               </div>
             </div>
-            <div 
-            className="mt-16 w-5/6 ml-4"
-            >
+            <div className="mt-16 w-5/6 ml-4">
               <Image
                 src={"/5.jpg"}
                 alt={content.title}
