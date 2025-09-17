@@ -1,7 +1,6 @@
 import React from "react";
 import Breadcrumb from "../_molecules/breadCrumb";
 import ContactCard from "../_molecules/contactCard";
-import { Header1, Header3 } from "../_atoms/Headers";
 import contactData from "../mocks/contactData.json";
 import ContactFormWrapper from "../_components/ContactFormWrapper";
 import { getMetadataForPath } from "../utils/metadataHelper";
@@ -24,7 +23,7 @@ const ContactPage = () => {
         </div>
 
         <div className="text-center mb-12">
-          <Header1 className="text-primary mb-4">İletişim</Header1>
+          <h1 className="text-primary mb-4">İletişim</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Bizimle iletişime geçin. Uzman ekibimiz size en kısa sürede dönüş
             yapacaktır.
@@ -53,9 +52,7 @@ const ContactPage = () => {
           >
             <div className="space-y-4">
               <div>
-                <Header3 className="text-primary900 mb-2">
-                  Türk Lirasi (₺)
-                </Header3>
+                <h3 className="text-primary900 mb-2">Türk Lirasi (₺)</h3>
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-medium">KUVEYT TÜRK:</span>{" "}
@@ -69,9 +66,7 @@ const ContactPage = () => {
               </div>
 
               <div>
-                <Header3 className="text-primary900 mb-2">
-                  Amerikan Dolari ($)
-                </Header3>
+                <h3 className="text-primary900 mb-2">Amerikan Dolari ($)</h3>
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-medium">KUVEYT TÜRK:</span>{" "}
@@ -85,7 +80,7 @@ const ContactPage = () => {
               </div>
 
               <div>
-                <Header3 className="text-primary900 mb-2">Euro (€)</Header3>
+                <h3 className="text-primary900 mb-2">Euro (€)</h3>
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-medium">KUVEYT TÜRK:</span>{" "}
@@ -108,14 +103,14 @@ const ContactPage = () => {
         </div>
 
         <div className="bg-white rounded-lg shadow-md p-6">
-          <Header1 className="text-xl font-bold text-primary900 mb-4">
+          <h1 className="text-xl font-bold text-primary900 mb-4">
             Firma Bilgileri
-          </Header1>
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <Header3 className=" mb-2">
+              <h3 className=" mb-2">
                 CTP MÜHENDİSLİK SU SOĞUTMA KULELERİ ANONİM ŞİRKETİ
-              </Header3>
+              </h3>
               <div className="space-y-1 text-sm text-gray-600">
                 <p>
                   <span className="font-medium">ADRES:</span> NİŞANTEPE MAH.
@@ -132,9 +127,7 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <Header3 className="mb-2">
-                CTP ENGINEERING DIŞ TİCARET A.Ş.
-              </Header3>
+              <h3 className="mb-2">CTP ENGINEERING DIŞ TİCARET A.Ş.</h3>
               <div className="space-y-1 text-sm text-gray-600">
                 <p>
                   <span className="font-medium">ADRES:</span> SANAYİ MAH. 60363

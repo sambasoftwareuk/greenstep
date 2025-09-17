@@ -1,5 +1,4 @@
 import React from "react";
-import { Header2 } from "../_atoms/Headers";
 import { CardWithIcon } from "../_molecules/cardWithIcon";
 import Image from "next/image";
 import { Certificate } from "../_atoms/Icons";
@@ -9,7 +8,7 @@ const GoalsComponent = () => {
   return (
     <div className="flex flex-col w-full my-4">
       <div>
-        <Header2>Achieve your goals with Empower</Header2>
+        <h2>Achieve your goals with Empower</h2>
       </div>
       <div className="hidden md:flex flex-row justify-between items-center w-full my-4">
         <div>

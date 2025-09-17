@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Header1 } from "../../_atoms/Headers";
 import VideoCard from "../../_molecules/videoCard";
 import Modal from "../../_molecules/modal";
 import { SambaSlider } from "../../_molecules/slider";
@@ -51,23 +50,23 @@ const Videos = () => {
     const baseUrl = videoLink;
     const params = new URLSearchParams({
       autoplay: shouldAutoplay ? "1" : "0",
-      controls: "1", 
-      disablekb: "0", 
-      fs: "1", 
+      controls: "1",
+      disablekb: "0",
+      fs: "1",
       iv_load_policy: "3",
       modestbranding: "1",
       rel: "0",
-      showinfo: "1", 
+      showinfo: "1",
       loop: "1",
       playlist: videoLink.split("/").pop(),
-      mute: "0", 
+      mute: "0",
     });
     return `${baseUrl}?${params.toString()}`;
   };
 
   return (
     <div className="px-4 py-8 max-w-screen-xl mx-auto">
-      <Header1 className="mb-6 text-center">Videolar</Header1>
+      <h1 className="mb-6 text-center">Videolar</h1>
 
       {/* Video Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import navLinks from "../constants/navLinks";
 import blogPosts from "../mocks/blogData.json";
-import { Header2, Header3 } from "../_atoms/Headers";
 import { LogoImage } from "../_atoms/images";
 import Logo from "../constants/logo.json";
 import CompanyAddress from "./CompanyAddress";
@@ -46,7 +45,7 @@ const FooterBlogList = () => {
             ))}
           </div>
         </div>
-        <Header2 className="pt-7 pb-5">Blog</Header2>
+        <h2 className="pt-7 pb-5">Blog</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
           {blogPosts.map((post) => {
             if (!post.title) return null;
